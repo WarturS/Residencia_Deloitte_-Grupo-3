@@ -1,4 +1,7 @@
-# 👨‍🎓 Alunos: 
+
+# Plano de Testes – ParaBank
+👨‍🎓Integrantes da equipe: 
+
 - Wenderson Artur da Silva (líder)
 - Jefferson Ribeiro dos Santos
 - Caio Henrique Santana do Nascimento
@@ -6,8 +9,6 @@
 - Matheus Rufino Tavares dos Santos
 - Pedro Lucas Santos de Araujo
 
-# Plano de Testes – ParaBank
-Integrantes da equipe
 ## Nome do Sistema
 ParaBank
 
