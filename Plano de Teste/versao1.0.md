@@ -13,9 +13,13 @@
 ParaBank
 
 ## Descrição do Sistema
-Descreva brevemente o que é o ParaBank e o principal objetivo do sistema.
 
----
+- O ParaBank é um sistema bancário online de demonstração
+que simula o funcionamento de um banco real. Ele permite
+realizar operações como consulta de contas, transferências,
+pagamentos e empréstimos. É usado para aprendizado,
+testes e validação de sistemas bancários, sem envolver
+dinheiro real.
 
 ## Funcionalidades em Escopo
 Liste as funcionalidades que serão consideradas neste plano de testes.
@@ -112,17 +116,22 @@ Exemplo:
 ### Tipos ou níveis de teste serão considerados:
 - teste de componentes, teste de integração e testes de sistema , nível de teste (caixa preta)
 ### Ferramentas podem ser utilizadas:
-- Trello , Playwrigth, Insomnia(se possível)
+- Trello , Playwrigth, Insomnia
 
 ---
 
 ## Premissas e Riscos
 
 ### Premissas
-- 
+- O Usuário devidamente cadastrado , conseguirá realizar pagamentos,transferência, empréstimos e criação de novas contas.
+- O ambiente ParaBank estará disponível durante todo o  período de testes (23/04 a 04/06).
+- Todos os 6 integrantes participarão ativamente de cada sprint conforme planejado.
+- As funcionalidades fora de escopo (Histórico de Pagamentos, Editar Conta, Investimento) não serão testadas em nenhuma sprint. 
 
 ### Riscos
-- 
+- O ambiente de testes pode apresentar indisponibilidade ou comportamento inconsistente em determinados períodos, comprometendo a execução das sprints.
+- O Android ou Computador pode não rodar no browser.
+- Problemas na instalação ou configuração das ferramentas podem atrasar o início dos testes automatizados e de API.
 
 ## Gerenciamento do Projeto
 
