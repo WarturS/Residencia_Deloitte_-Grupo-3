@@ -99,12 +99,14 @@ Exemplo:
 ---
 
 ## Funcionalidades Fora de Escopo
-Liste funcionalidades que não serão abordadas neste plano de testes.
+- Histórico de Pagamentos
+- Editar Conta
+- Investimento
 
 ---
 
 ## Estratégia de Testes
-Descreva, de forma resumida:
+
 ### Objetivo dos testes:
 - Desenvolver e manter um sistema robusto, garantindo a execução de testes tanto na interface quanto no backend, com foco na identificação e documentação de falhas. Gerar relatórios claros sobre bugs encontrados, acompanhar os resultados dos testes e assegurar a entrega de resultados positivos, contribuindo para a melhoria contínua da qualidade do software.
 ### Tipos ou níveis de teste serão considerados:
