@@ -128,12 +128,12 @@ Descreva, de forma resumida:
 Método ágil - Scrum
 
 ### Organização em Sprints
-Descreva como o projeto será dividido em sprints.
 
-Considere informar:
-- Quantas sprints compõem o projeto : 04 Sprint
-- A duração estimada de cada sprint : 01 ou 02 Semanas
-- As funcionalidades ou focos principais de cada sprint
+####  Quantas sprints compõem o projeto : 
+- 04 Sprint
+#### A duração estimada de cada sprint : 
+- 01 ou 02 Semanas
+ 
 #### Sprint 01 :
 - Accounts Overview:
   - Escrever casos de teste
