@@ -116,7 +116,7 @@ Exemplo:
 ### Tipos ou níveis de teste serão considerados:
 - teste de componentes, teste de integração e testes de sistema , nível de teste (caixa preta)
 ### Ferramentas podem ser utilizadas:
-- Trello , Playwrigth, Insomnia
+- Trello , Playwrigth, Insomnia, TestRail
 
 ---
 
