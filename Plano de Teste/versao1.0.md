@@ -156,13 +156,13 @@ Criar os cenários e Casos de testes das seguintes funcionalidades:
 #### Sprint 02 : 
 
 Realizar Teste de Interface em Accounts Overview: 
-=> Testar carregamento  das dashboards: saldo, lista de contas, histórico
-=> Validar responsividade: desktop, mobile
-=> Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones
+- Testar carregamento  das dashboards: saldo, lista de contas, histórico
+- Validar responsividade: desktop, mobile
+- Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones
 	  
-Realizar Teste de Interface em Accounts Overview:
-=> Validar formulário>: campos obrigatórios, 
-=> Validar mensagens: sucesso, erro, campos inválidos
+Realizar Teste de Interface em Open New Account:
+- Validar formulário>: campos obrigatórios
+- Validar mensagens: sucesso, erro, campos inválidos
 
 Realizar Teste de Interface em Trasnfer Founds: 
 - Validar fluxo de transferência: conta origem, conta destino, valor, confirmação
