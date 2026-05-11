@@ -130,7 +130,6 @@ Exemplo:
 
 ### Riscos
 - O ambiente de testes pode apresentar indisponibilidade ou comportamento inconsistente em determinados períodos, comprometendo a execução das sprints.
-- O Android ou Computador pode não rodar no browser.
 - Problemas na instalação ou configuração das ferramentas podem atrasar o início dos testes automatizados e de API.
 
 ## Gerenciamento do Projeto
@@ -143,33 +142,42 @@ Método ágil - Scrum
 ####  Quantas sprints compõem o projeto : 
 - 04 Sprint
 #### A duração estimada de cada sprint : 
-- 01 ou 02 Semanas
+- 01 Semana
  
 #### Sprint 01 :
-- Accounts Overview:
-  - Escrever casos de teste
-  - Testar API: Dados não vazam entre usuários
-  - Testar Front: Exibição correta de saldo e contas
+Criar os cenários e Casos de testes das seguintes funcionalidades: 
+	-Accounts Overview,
+	- Open New Account,
+	- Transfer Rounds,
+	- Request Loan
+	- Adicionar os cenários e casos de testes no TestRail
+
 #### Sprint 02 : 
-- Open New Account:
-  - Criar testes de: Campos obrigatórios, Dados inválidos
-  - Testar comportamento:
-    - Erro → não cria conta
-    - Sucesso → conta aparece no overview
+- Realizar Teste de Interface em Accounts Overview: 
+   => Testar carregamento  das dashboards: saldo, lista de contas, histórico
+	  => Validar responsividade: desktop, mobile
+	  => Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones
+	  
+	- Realizar Teste de Interface em Accounts Overview:
+	  => Validar formulário>: campos obrigatórios, 
+	  => Validar mensagens: sucesso, erro, campos inválidos
+
+	- Realizar Teste de Interface em Trasnfer Founds: 
+	  => Validar fluxo de transferência: conta origem, conta destino, valor, confirmação
+	  => Validar comportamento visual: mensagens, feedback visual
+	  => Validar erros : saldo insuficiente, valor negativo, campos vazios
+	  => Teste de responsividade
+
+	- Realizar Teste de Interface em Request Loan: 
+	  => Validar formulário de empréstimo: valores, entrada, envio 
+	  => Validar UX/UI: clareza das informações, organização visual
+ 	  => Validar erros: valor negativo, campos vazios
+
 #### Sprint 03 : 
-- Transfer Funds:
-  - Testar cenários : Saldo insuficiente, Conta inválida, Contas de clientes diferentes
-  - Testes de falha:
-    - Simular erro no meio da transação
-  - Verificar saldos antes/depois
+-Realizar teste de API 
 #### Sprint 04 : 
-- Request Loan:
-  - Testes completos:
-    - Criar conta → transferir → solicitar empréstimo
-  - Testes de usabilidade
-  - Validação final dos critérios de aceite
+-Realizar casos de evidência para cada caso de teste.
 ### Cronograma
-Informe:
 - Data de início do projeto : 23/04
 - Data prevista de encerramento: 04/06
-``
+
