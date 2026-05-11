@@ -24,7 +24,6 @@ dinheiro real.
 ## Funcionalidades em Escopo
 Liste as funcionalidades que serão consideradas neste plano de testes.
 
-Exemplo:
 - Accounts Overview
 - Open New Account
 - Transfer Funds
