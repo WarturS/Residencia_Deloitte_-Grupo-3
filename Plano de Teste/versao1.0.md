@@ -145,33 +145,35 @@ Método ágil - Scrum
 - 01 Semana
  
 #### Sprint 01 :
+
 Criar os cenários e Casos de testes das seguintes funcionalidades: 
-	-Accounts Overview,
-	- Open New Account,
-	- Transfer Rounds,
-	- Request Loan
-	- Adicionar os cenários e casos de testes no TestRail
+- Accounts Overview,
+- Open New Account,
+- Transfer Rounds,
+- Request Loan
+- Adicionar os cenários e casos de testes no TestRail
 
 #### Sprint 02 : 
-- Realizar Teste de Interface em Accounts Overview: 
-   => Testar carregamento  das dashboards: saldo, lista de contas, histórico
-	  => Validar responsividade: desktop, mobile
-	  => Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones
+
+Realizar Teste de Interface em Accounts Overview: 
+=> Testar carregamento  das dashboards: saldo, lista de contas, histórico
+=> Validar responsividade: desktop, mobile
+=> Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones
 	  
-	- Realizar Teste de Interface em Accounts Overview:
-	  => Validar formulário>: campos obrigatórios, 
-	  => Validar mensagens: sucesso, erro, campos inválidos
+Realizar Teste de Interface em Accounts Overview:
+=> Validar formulário>: campos obrigatórios, 
+=> Validar mensagens: sucesso, erro, campos inválidos
 
-	- Realizar Teste de Interface em Trasnfer Founds: 
-	  => Validar fluxo de transferência: conta origem, conta destino, valor, confirmação
-	  => Validar comportamento visual: mensagens, feedback visual
-	  => Validar erros : saldo insuficiente, valor negativo, campos vazios
-	  => Teste de responsividade
+Realizar Teste de Interface em Trasnfer Founds: 
+- Validar fluxo de transferência: conta origem, conta destino, valor, confirmação
+- Validar comportamento visual: mensagens, feedback visual
+- Validar erros : saldo insuficiente, valor negativo, campos vazios
+- Teste de responsividade
 
-	- Realizar Teste de Interface em Request Loan: 
-	  => Validar formulário de empréstimo: valores, entrada, envio 
-	  => Validar UX/UI: clareza das informações, organização visual
- 	  => Validar erros: valor negativo, campos vazios
+Realizar Teste de Interface em Request Loan: 
+- Validar formulário de empréstimo: valores, entrada, envio
+- Validar UX/UI: clareza das informações, organização visual
+- Validar erros: valor negativo, campos vazios
 
 #### Sprint 03 : 
 -Realizar teste de API 
