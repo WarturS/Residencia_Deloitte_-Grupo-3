@@ -178,6 +178,7 @@ Realizar Teste de Interface em Request Loan:
 #### Sprint 03 : 
 -Realizar teste de API 
 #### Sprint 04 : 
+- Realizar testes dentro do TestRail
 -Realizar casos de evidência para cada caso de teste.
 ### Cronograma
 - Data de início do projeto : 23/04
