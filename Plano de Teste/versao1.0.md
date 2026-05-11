@@ -113,7 +113,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 ### Objetivo dos testes:
 - Desenvolver e manter um sistema robusto, garantindo a execução de testes tanto na interface quanto no backend, com foco na identificação e documentação de falhas. Gerar relatórios claros sobre bugs encontrados, acompanhar os resultados dos testes e assegurar a entrega de resultados positivos, contribuindo para a melhoria contínua da qualidade do software.
 ### Tipos ou níveis de teste serão considerados:
-- teste de componentes, teste de integração e testes de sistema , nível de teste (caixa preta)
+- teste de integração e testes de sistema , nível de teste (caixa preta)
 ### Ferramentas podem ser utilizadas:
 - Trello , Playwrigth, Insomnia, TestRail
 
