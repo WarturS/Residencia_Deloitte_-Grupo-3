@@ -127,7 +127,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 
 ### Premissas
 - O Usuário devidamente cadastrado , conseguirá realizar pagamentos,transferência, empréstimos e criação de novas contas.
-- O ambiente ParaBank estará disponível durante todo o  período de testes (23/04 a 04/06).
+- Tanto o ambiente ParaBank quanto o TestRail estarão disponíveis durante todo o período de testes (23/04 a 04/06).
 - Todos os 6 integrantes participarão ativamente de cada sprint conforme planejado.
 - As funcionalidades fora de escopo (Histórico de Pagamentos, Editar Conta, Investimento) não serão testadas em nenhuma sprint. 
 
