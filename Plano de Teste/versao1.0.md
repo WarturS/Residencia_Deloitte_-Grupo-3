@@ -47,7 +47,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - Retorna dados de contas de forma isolada por cliente,sem mistura de informações.
 - Retorna respostas consistentes e previsíveis, nesmo quando não existem contas associadas.
 - Não  expõe dados de contas não pertencentes ao cliente informado.
-- 
+--- 
 ### Open New Account
 
 **Front-end**
@@ -56,7 +56,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - Não permite prosseguir sem as informações mínimas necessárias 
 - Comunica ao Usuário o resultado da tentativa de abertura de conta .
 - Mantém o acesso contínuo ás demais funcionalidades após da operação.
----
+  
 **API / Back-end**
 - Permite criar uma nova conta vinculada a um cliente existente .
 - Exige cliente , tipo de conta e conta de origem válidos para processar a criação 
@@ -64,7 +64,6 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - Em caso de sucesso , a nova conta passa a fazer parte do conjunto de contas do cliente .
 - Em caso de erro, não gera efeitos colaterais parciais  sobre contas existentes.
 ---
-
 ### Transfer Funds
 
 **Front-end**
@@ -73,8 +72,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - Não permite a execução de transferência sem informações essenciais.
 - Comunica o resultado da tentativa de transferência ao usuário .
 - Mantém o contexto de navegação do sistema após a operação.
---- 
-
+  
 **API / Back-end**
 - Permite registrar uma transação de transferência entre contas válidas. 
 - Garante que as contas envolvidas pertencem ao mesmo cliente .
@@ -82,7 +80,6 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - Em caso de erro, não altera saldos nem cria transações parciais .
 - Retorna reposta coerente com o resultado da operação.
 ---
-
 ### Request Loan
 
 **Front-end**
@@ -98,7 +95,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - Retorna de forma clara o resultado da solicitação (processada ou não).
 - Em caso de sucesso, gera um empréstimo vinculado ao cliente e à conta.
 - Em caso de erro, não provoca alterações parciais em dados financeiros.
-
+  
 ---
 
 ## Funcionalidades Fora de Escopo
