@@ -113,7 +113,7 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 - teste de integração e testes de sistema , nível de teste (caixa preta)
 
 ### Ambientes de teste:
-- Edge (PC Windows)
+- Edge (Desktop Windows)
 
 ### Ferramentas podem ser utilizadas:
 - Trello , Playwrigth, Insomnia, TestRail
