@@ -115,8 +115,8 @@ Liste as funcionalidades que serão consideradas neste plano de testes.
 ### Ambientes de teste:
 - Edge (Desktop Windows)
 
-### Ferramentas podem ser utilizadas:
-- Trello , Playwrigth, Insomnia, TestRail
+### Ferramentas utilizadas:
+- Trello, Notion, Playwrigth, Insomnia, TestRail
 
 ---
 
