@@ -22,7 +22,6 @@ testes e validação de sistemas bancários, sem envolver
 dinheiro real.
 
 ## Funcionalidades em Escopo
-Liste as funcionalidades que serão consideradas neste plano de testes.
 
 - Accounts Overview
 - Open New Account
