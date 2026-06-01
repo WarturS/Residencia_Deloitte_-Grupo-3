@@ -113,6 +113,7 @@ dinheiro real.
 
 ### Ambientes de teste:
 - Edge (Desktop Windows)
+- Chrome (Desktop Windows)
 
 ### Ferramentas utilizadas:
 - Trello, Notion, Playwrigth, Insomnia, TestRail
