@@ -1,0 +1,1622 @@
+<run>
+<id>R22</id>
+<name>Tranfer Funds</name>
+<description/>
+<config/>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<completed>false</completed>
+<milestone/>
+<start_date>2026-06-02</start_date>
+<end_date>2026-06-03</end_date>
+<stats>
+<passed>
+<percent>75</percent>
+<count>12</count>
+</passed>
+<blocked>
+<percent>0</percent>
+<count>0</count>
+</blocked>
+<untested>
+<percent>0</percent>
+<count>0</count>
+</untested>
+<retest>
+<percent>0</percent>
+<count>0</count>
+</retest>
+<failed>
+<percent>25</percent>
+<count>4</count>
+</failed>
+<automation_passed>
+<percent>0</percent>
+<count>0</count>
+</automation_passed>
+<automation_failed>
+<percent>0</percent>
+<count>0</count>
+</automation_failed>
+<automation_error>
+<percent>0</percent>
+<count>0</count>
+</automation_error>
+</stats>
+<sections>
+<section>
+<name>Casos de Testes</name>
+<description><p>Esta é uma pasta destinada a armazenar todos os casos de teste para uma melhor organização </p></description>
+<sections>
+<section>
+<name>Accounts Overview</name>
+<description/>
+<sections>
+<section>
+<name>Testes de Interface</name>
+<description><p>Subpasta de "Accounts Overview" para reunir os testes de interface</p></description>
+</section>
+</sections>
+</section>
+<section>
+<name>Open New Account</name>
+<description/>
+<sections>
+<section>
+<name>Testes de Interface</name>
+<description><p><span style="color: rgb(32, 32, 32); font-family: Arial, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(234, 241, 247); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none" data-pasted="true">Subpasta de "Open New Account" para reunir os testes de interface</span></p></description>
+</section>
+</sections>
+</section>
+<section>
+<name>Transfer Funds</name>
+<description/>
+<tests>
+<test>
+<id>T261</id>
+<title>CT01 - Acessar a funcionalidade Transfer Funds</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou uma conta no sistema com sucesso</content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When entra com usuário e senha corretos</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo acessar a funcionalidade Transfer Funds</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C57</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:10:52Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou uma conta no sistema com sucesso</content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When entra com usuário e senha corretos</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo acessar a funcionalidade Transfer Funds</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T262</id>
+<title>CT02 - Informar um valor numérico válido no campo Amount</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no campo "Amount", informando um valor numérico válido</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve exibir o valor que foi definido no campo</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C58</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:12:39Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no campo "Amount", informando um valor numérico válido</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve exibir o valor que foi definido no campo</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T263</id>
+<title>CT03 - Selecionar uma conta de origem na opção From account</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no campo "From account"</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve permitir o usuário selecionar uma conta de origem, para definir de onde o valor será debitado</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C59</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:13:24Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no campo "From account"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve permitir o usuário selecionar uma conta de origem, para definir de onde o valor será debitado</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T264</id>
+<title>CT04 - Selecionar uma conta de destino para realizar transferência</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no campo "to account"</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo selecionar uma conta de destino diferente da conta de origem, para realizar a transferência corretamente</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C60</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:14:03Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no campo "to account"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo selecionar uma conta de destino diferente da conta de origem, para realizar a transferência corretamente</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T265</id>
+<title>CT05 - Realizar a transferência apenas se houver saldo suficiente na conta de origem</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER"</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo conseguir realizar a transferência apenas se houver saldo suficiente na conta de origem</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C61</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:15:11Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo conseguir realizar a transferência apenas se houver saldo suficiente na conta de origem</content>
+<actual>Mesmo não tendo saldo suficiente em conta, o usuário consegue realizar a transferência</actual>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T266</id>
+<title>CT06 - Valor transferido com sucesso quando todas as informações estiverem corretas</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER"</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo ter o valor transferido com sucesso quando todas as informações estiverem corretas</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C62</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:16:12Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo ter o valor transferido com sucesso quando todas as informações estiverem corretas</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T267</id>
+<title>CT07 - Visualizar uma mensagem de confirmação</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER"</content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo visualizar uma mensagem de confirmação, informando o valor transferido e as contas envolvidas</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C63</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:16:44Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos</content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo visualizar uma mensagem de confirmação, informando o valor transferido e as contas envolvidas</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T268</id>
+<title>CT08 - Visualizar botão Account Activity</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER" </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo visualizar um botão chamado Account Activity para visualizar a minha atividade após a transação</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C64</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T18:18:49Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário criou mais de uma conta no sistema com sucesso, entra com usuário e senha corretos </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>And pressionar em "Transfer Funds"</content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>When clicar no botão "TRANSFER" </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then devo visualizar um botão chamado Account Activity para visualizar a minha atividade após a transação</content>
+<actual>Não há botão. Somente texto </actual>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+</tests>
+<sections>
+<section>
+<name>Testes de Interface</name>
+<description><p><span style="color: rgb(32, 32, 32); font-family: Arial, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(234, 241, 247); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none" data-pasted="true">Subpasta de "Transfer Funds" para reunir os testes de interface</span></p></description>
+<tests>
+<test>
+<id>T269</id>
+<title>TI01 - Exibir a funcionalidade Transfer Funds</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds" </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>Then deve visualizar um pequeno formulário de transferência </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>And conter o campo “Amount”, onde é possível definir o valor da transferência </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And o campo “From account”, onde é definido a conta de origem do valor que será debitado </content>
+</scenario>
+<scenario>
+<index>6</index>
+<content>And o campo “to account”, onde é definido a conta de destino para realizar a transferência </content>
+</scenario>
+<scenario>
+<index>7</index>
+<content>And o botão “TRANSFER”, para aplicação da transferência</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C117</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:08:48Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds" </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>Then deve visualizar um pequeno formulário de transferência </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>And conter o campo “Amount”, onde é possível definir o valor da transferência </content>
+<actual/>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And o campo “From account”, onde é definido a conta de origem do valor que será debitado </content>
+<actual/>
+</scenario>
+<scenario>
+<index>6</index>
+<content>And o campo “to account”, onde é definido a conta de destino para realizar a transferência </content>
+<actual/>
+</scenario>
+<scenario>
+<index>7</index>
+<content>And o botão “TRANSFER”, para aplicação da transferência</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T270</id>
+<title>TI02 - Exibir no campo 'Amount' exatamente os caracteres digitados pelo usuário</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", clicar sobre o campo “Amount” </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And inserir dados </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve visualizar o exato conteúdo que escreveu no campo</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C118</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:09:54Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", clicar sobre o campo “Amount” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And inserir dados </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve visualizar o exato conteúdo que escreveu no campo</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T271</id>
+<title>TI03 - Exibir somente a primeira conta do usuário em “From account” e “to account”</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds" </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar sobre “From account” e “to account” </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve visualizar uma lista suspensa com somente uma conta </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And a mesma conta deve estar pré-selecionada tanto em “From account” quanto “to account”</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C119</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:11:01Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds" </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar sobre “From account” e “to account” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve visualizar uma lista suspensa com somente uma conta </content>
+<actual/>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And a mesma conta deve estar pré-selecionada tanto em “From account” quanto “to account”</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T272</id>
+<title>TI04 - Exibir todas as contas do usuário em “From account” e “to account”</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema, cadastrado novas contas </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds" </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar sobre “From account” e “to account” </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve visualizar uma lista suspensa com todas as contas cadastradas </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And a primeira conta deve estar pré-selecionada tanto em “From account” quanto “to account” </content>
+</scenario>
+<scenario>
+<index>6</index>
+<content>And ao escolher uma conta diferente da selecionada, em seguida clicar sobre, o campo deve ser atualizado com a conta selecionada pelo usuário</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C120</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:12:05Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema, cadastrado novas contas </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds" </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar sobre “From account” e “to account” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve visualizar uma lista suspensa com todas as contas cadastradas </content>
+<actual/>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And a primeira conta deve estar pré-selecionada tanto em “From account” quanto “to account” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>6</index>
+<content>And ao escolher uma conta diferente da selecionada, em seguida clicar sobre, o campo deve ser atualizado com a conta selecionada pelo usuário</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T273</id>
+<title>TI05 - Exibir erro de transferência com valor vazio</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", clicar sobre o campo “Amount”, não inserir dados </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve redirecioná-lo para a tela de “Error!” </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And gerar uma mensagem de erro informando “An internal error has occurred and has been logged”</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C121</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:13:16Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", clicar sobre o campo “Amount”, não inserir dados </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve redirecioná-lo para a tela de “Error!” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And gerar uma mensagem de erro informando “An internal error has occurred and has been logged”</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T274</id>
+<title>TI06 - Exibir erro de transferência tendo valores não numéricos</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", clicar sobre o campo “Amount”, inserir dados não numéricos </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve ser redirecionado para a tela de “Error!” </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And gerar uma mensagem de erro informando “An internal error has occurred and has been logged”</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C122</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:14:16Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Passed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", clicar sobre o campo “Amount”, inserir dados não numéricos </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve ser redirecionado para a tela de “Error!” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And gerar uma mensagem de erro informando “An internal error has occurred and has been logged”</content>
+<actual/>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T275</id>
+<title>TI07 - Exibir mensagem de erro para transferência com valor insuficiente</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema, cadastrado mais de uma conta </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", inserir valor fora de saldo na conta </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve redirecioná-lo para a tela de “Error!” </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And gerar uma mensagem de erro informando “An internal error has occurred and has been logged”</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C123</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:18:01Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema, cadastrado mais de uma conta </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", inserir valor fora de saldo na conta </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then o sistema deve redirecioná-lo para a tela de “Error!” </content>
+<actual>É possível fazer uma transferência ainda que não haja saldo suficiente com valores muito grandes</actual>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And gerar uma mensagem de erro informando “An internal error has occurred and has been logged”</content>
+<actual>É exibida uma mensagem padrão de transferência completada com sucesso</actual>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+<test>
+<id>T276</id>
+<title>TI08 - Exibir mensagem de confirmação para transferência válida</title>
+<template>Behaviour Driven Development</template>
+<type>Functional</type>
+<priority>High</priority>
+<estimate>180</estimate>
+<references/>
+<custom>
+<automation_type>
+<id>0</id>
+<value> None</value>
+</automation_type>
+<is_automated>false</is_automated>
+<preconds><p data-pasted="true">1. Estar logado no sistema com usuário válido</p><p>2. Estar na tela da funcionalidade de Transfer Funds</p></preconds>
+<testrail_bdd_scenario>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema, cadastrado mais de uma conta </content>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", inserir dados válidos, escolher contas de origem e destino diferentes </content>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve ser redirecionado para a tela de “Transfer Complete!” </content>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And possuir um texto de mensagem de confirmação </content>
+</scenario>
+<scenario>
+<index>6</index>
+<content>And o valor transferido </content>
+</scenario>
+<scenario>
+<index>7</index>
+<content>And a conta de origem e destino </content>
+</scenario>
+<scenario>
+<index>8</index>
+<content>And o botão “Account Activity”</content>
+</scenario>
+</testrail_bdd_scenario>
+</custom>
+<caseid>C124</caseid>
+<casestatus>Design</casestatus>
+<caseassignedto>Fellipe Nogueira Caluête</caseassignedto>
+<automation>No automation attached</automation>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<inprogress/>
+<changes>
+<change>
+<createdon>2026-06-02T19:19:31Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Failed</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version>1.0</version>
+<elapsed/>
+<defects/>
+<custom>
+<testrail_bdd_scenario_results>
+<scenario>
+<index>1</index>
+<content>Given que o usuário tenha realizado login no sistema, cadastrado mais de uma conta </content>
+<actual/>
+</scenario>
+<scenario>
+<index>2</index>
+<content>When acessar a funcionalidade "Transfer Funds", inserir dados válidos, escolher contas de origem e destino diferentes </content>
+<actual/>
+</scenario>
+<scenario>
+<index>3</index>
+<content>And clicar no botão “TRANSFER” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>4</index>
+<content>Then deve ser redirecionado para a tela de “Transfer Complete!” </content>
+<actual/>
+</scenario>
+<scenario>
+<index>5</index>
+<content>And possuir um texto de mensagem de confirmação </content>
+<actual/>
+</scenario>
+<scenario>
+<index>6</index>
+<content>And o valor transferido </content>
+<actual/>
+</scenario>
+<scenario>
+<index>7</index>
+<content>And a conta de origem e destino </content>
+<actual/>
+</scenario>
+<scenario>
+<index>8</index>
+<content>And o botão “Account Activity”</content>
+<actual>Não há botão. Somente texto</actual>
+</scenario>
+</testrail_bdd_scenario_results>
+</custom>
+</change>
+<change>
+<createdon>2026-06-02T18:07:59Z</createdon>
+<createdby>Fellipe Nogueira Caluête</createdby>
+<status>Untested</status>
+<assignedto>Fellipe Nogueira Caluête</assignedto>
+<comment/>
+<version/>
+<elapsed/>
+<defects/>
+</change>
+</changes>
+</test>
+</tests>
+</section>
+</sections>
+</section>
+<section>
+<name>Request Loan</name>
+<description/>
+<sections>
+<section>
+<name>Testes de Interface</name>
+<description><p><span style="color: rgb(32, 32, 32); font-family: Arial, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(234, 241, 247); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none" data-pasted="true">Subpasta de "Request Loan" para reunir os testes de interface</span></p></description>
+</section>
+</sections>
+</section>
+</sections>
+</section>
+</sections>
+</run>
