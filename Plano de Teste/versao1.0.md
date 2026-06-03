@@ -7,7 +7,7 @@
 - Caio Henrique Santana do Nascimento
 - Fellipe Henrique Nogueira Fernandes Caluête
 - Matheus Rufino Tavares dos Santos
-- Pedro Lucas Santos de Araujo
+- Pedro Lucas Santos de Araújo
 
 ## Nome do Sistema
 ParaBank
