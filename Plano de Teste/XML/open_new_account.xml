@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<run>
+	<id>R23</id>
+	<name>Open New Account</name>
+	<description></description>
+	<config></config>
+	<createdon>2026-06-03T02:06:15Z</createdon>
+		<completed>false</completed>
+		<milestone></milestone>
+	
+	<stats>
+										<passed>
+			<percent>63</percent>
+			<count>12</count>
+		</passed>
+											<blocked>
+			<percent>0</percent>
+			<count>0</count>
+		</blocked>
+											<untested>
+			<percent>0</percent>
+			<count>0</count>
+		</untested>
+											<retest>
+			<percent>0</percent>
+			<count>0</count>
+		</retest>
+											<failed>
+			<percent>37</percent>
+			<count>7</count>
+		</failed>
+																		<automation_passed>
+			<percent>0</percent>
+			<count>0</count>
+		</automation_passed>
+											<automation_failed>
+			<percent>0</percent>
+			<count>0</count>
+		</automation_failed>
+											<automation_error>
+			<percent>0</percent>
+			<count>0</count>
+		</automation_error>
+																								</stats>	<sections>
+	<section>
+		<name>Casos de Testes</name>
+		<description>&lt;p&gt;Esta é uma pasta destinada a armazenar todos os casos de teste para uma melhor organização &lt;/p&gt;</description>
+										<sections>
+	<section>
+		<name>Accounts Overview</name>
+		<description></description>
+										<sections>
+	<section>
+		<name>Testes de Interface</name>
+		<description>&lt;p&gt;Subpasta de &quot;Accounts Overview&quot; para reunir os testes de interface&lt;/p&gt;</description>
+									</section>
+</sections>
+			</section>
+	<section>
+		<name>Open New Account</name>
+		<description></description>
+						<tests>
+						            																																																			<test>
+				<id>T277</id>
+				<title>CT01 - Acessar a funcionalidade Open New Account</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p data-pasted=&quot;true&quot;&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário está autenticado no sistema&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;   &lt;strong&gt;When &lt;/strong&gt;acessar o menu &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;    &lt;strong&gt;Then &lt;/strong&gt;a tela de abertura de conta deve ser exibida&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C76</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>12</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:09:32Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version>1.0</version>
+																														<elapsed>12</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T278</id>
+				<title>CT02 - Exibir pergunta para seleção do tipo de conta</title>
+												<template>Test Case (Text)</template>
+																<type>Automated</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<automation_candidate><id>1</id><value> Yes</value></automation_candidate>
+															<preconds>&lt;p&gt;&lt;strong&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;Dado&lt;/font&gt;&lt;/font&gt;&lt;/strong&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt; que o usuário acessou a tela &quot;Abrir &lt;/font&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;nova conta&quot;&lt;/font&gt;&lt;/font&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;/font&gt;&lt;br&gt;&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;  &lt;strong&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;Quando&lt;/font&gt;&lt;/font&gt;&lt;/strong&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt; uma página para carro &lt;/font&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;arregada&lt;/font&gt;&lt;/font&gt;&lt;span class=&quot;fr-marker&quot; data-id=&quot;0&quot; data-type=&quot;false&quot; style=&quot;display: none; line-height: 0&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;​&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;&lt;span class=&quot;fr-marker&quot; data-id=&quot;0&quot; data-type=&quot;true&quot; style=&quot;display: none; line-height: 0&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;​&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;/font&gt;&lt;br&gt;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt; &lt;strong&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;Em seguida,&lt;/font&gt;&lt;/font&gt;&lt;/strong&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt;&lt;font dir=&quot;auto&quot; style=&quot;vertical-align: inherit&quot;&gt; deve ser exibida a mensagem &quot;Que tipo de conta você gostaria de abrir?&quot;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C77</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>8</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:11:39Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version>1.0</version>
+																														<elapsed>8</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T279</id>
+				<title>CT03 - Abrir uma conta SAVINGS com sucesso</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p data-pasted=&quot;true&quot;&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário possui menos de 2 contas SAVINGS&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;possui saldo suficiente para o depósito inicial&lt;/p&gt;</preconds>
+															<steps>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;When &lt;/strong&gt;selecionar o tipo de conta &quot;SAVINGS&quot;&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;selecionar uma conta de origem válida&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;clicar em &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;Then &lt;/strong&gt;a conta deve ser criada com sucesso&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;o tipo da nova conta deve ser &quot;SAVINGS&quot;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C78</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>16</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:13:08Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version>1.0</version>
+																														<elapsed>16</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T280</id>
+				<title>CT04 - Abrir uma conta CHECKING com sucesso</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;Given &lt;/strong&gt;que o usuário não possui conta CHECKING cadastrada&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;possui saldo suficiente para o depósito inicial&lt;/p&gt;</preconds>
+															<steps>&lt;p data-pasted=&quot;true&quot;&gt;  &lt;strong&gt;When &lt;/strong&gt;selecionar o tipo de conta &quot;CHECKING&quot;&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;selecionar uma conta de origem válida&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;clicar em &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;Then &lt;/strong&gt;a conta deve ser criada com sucesso&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;o tipo da nova conta deve ser &quot;CHECKING&quot;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C79</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>13</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:14:46Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version>1.0</version>
+																														<elapsed>13</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T281</id>
+				<title>CT05 - Impedir abertura de segunda conta CHECKING</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;  &lt;strong&gt;Given &lt;/strong&gt;que o usuário já possui 1 conta CHECKING&lt;/p&gt;</preconds>
+															<steps>&lt;p data-pasted=&quot;true&quot;&gt; &lt;strong&gt;When &lt;/strong&gt;selecionar o tipo de conta &quot;CHECKING&quot;&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;clicar em &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;    &lt;strong&gt;Then &lt;/strong&gt;o sistema deve impedir a criação da conta&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;deve exibir uma mensagem informando que o limite foi atingido&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C81</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>16</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:22:36Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário já possui 1 conta CHECKING &lt;/p&gt;&lt;p&gt; &lt;strong&gt;When &lt;/strong&gt;selecionar o tipo de conta &quot;CHECKING&quot;      &lt;strong&gt;And &lt;/strong&gt;clicar em &quot;Open New Account&quot;     &lt;/p&gt;&lt;p&gt; Esperado: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema deve impedir a criação da conta      &lt;strong&gt;And &lt;/strong&gt;deve exibir uma mensagem informando que o limite foi atingid &lt;/p&gt;&lt;p&gt;O que aconteceu: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema permite a criação de uma segudna conta &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;emite uma mensagem &quot;Account Opened!&quot;&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>16</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T282</id>
+				<title>CT06 - Exibir valor mínimo de depósito inicial</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;    &lt;strong&gt;Given &lt;/strong&gt;que o usuário acessou a tela &quot;Open New Account&quot;&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt; &lt;strong&gt;When &lt;/strong&gt;a página for carregada&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;a mensagem contendo o valor mínimo para abertura da conta deve ser exibida&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C82</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>8</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:24:36Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que o usuário acessou a tela &quot;Open New Account&quot;      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;a página for carregada      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;a mensagem contendo o valor mínimo para abertura da conta deve ser exibida &lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>8</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T283</id>
+				<title>CT07 - Validar saldo suficiente antes da abertura da conta</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p data-pasted=&quot;true&quot;&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário selecionou uma conta de origem&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;o saldo disponível é maior ou igual ao depósito mínimo exigido&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;    &lt;strong&gt;When &lt;/strong&gt;clicar em &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;   &lt;strong&gt;Then &lt;/strong&gt;a validação de saldo deve ser concluída com sucesso&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;a conta poderá ser criada&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C84</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>13</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:28:06Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;Aconteceu dentro do ocorrido. &lt;/p&gt;&lt;p&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário selecionou uma conta de origem     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;o saldo disponível é maior ou igual ao depósito mínimo exigido      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;clicar em &quot;Open New Account&quot;      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;a validação de saldo deve ser  concluída com sucesso     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;a conta poderá ser criada&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>13</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T284</id>
+				<title>CT08 - Impedir abertura da conta quando saldo for insuficiente</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p data-pasted=&quot;true&quot;&gt;    &lt;strong&gt;Given &lt;/strong&gt;que o usuário selecionou uma conta de origem&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;o saldo disponível é menor que o depósito mínimo exigido&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;  &lt;strong&gt;When &lt;/strong&gt;clicar em &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;    &lt;strong&gt;Then &lt;/strong&gt;a conta não deve ser criada&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;deve ser exibida uma mensagem de saldo insuficiente&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C85</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>16</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:32:29Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;     &lt;strong&gt;Given &lt;/strong&gt;que o usuário selecionou uma conta de origem  &lt;/p&gt;&lt;p&gt;     &lt;strong&gt;And &lt;/strong&gt;o saldo disponível é menor que o depósito mínimo exigido    &lt;/p&gt;&lt;p&gt;     &lt;strong&gt;When &lt;/strong&gt;clicar em &quot;Open New Account&quot;  &lt;/p&gt;&lt;p&gt;Esperado:     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;    Then &lt;/strong&gt;a conta não deve ser criada     &lt;/p&gt;&lt;p&gt;     &lt;strong&gt;And &lt;/strong&gt;deve ser exibida uma mensagem de saldo insuficiente &lt;/p&gt;&lt;p&gt;O que aconteceu: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;   Then &lt;/strong&gt;a conta é criada&lt;/p&gt;&lt;p&gt;&lt;strong&gt;   And &lt;/strong&gt;Apresenta em seu status , um valor de R$ 90,00 mesmo sem receber nada da conta que depositaria. &lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>16</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T285</id>
+				<title>CT09 - Exibir confirmação detalhada após abertura da conta</title>
+												<template>Test Case (Text)</template>
+																<type>Automated</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>true</is_automated>
+															<preconds>&lt;p&gt; &lt;strong&gt;Given &lt;/strong&gt;que a nova conta foi criada com sucesso&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;    &lt;strong&gt;When &lt;/strong&gt;o processamento for concluído&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;    Then &lt;/strong&gt;deve ser exibida uma mensagem de confirmação&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;o tipo da conta criada deve ser informado&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C86</caseid>
+																																<casestatus>Design</casestatus>
+																						<caseassignedto></caseassignedto>
+										
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>13</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:35:43Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que a nova conta foi criada com sucesso      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;o processamento for concluído      &lt;/p&gt;&lt;p&gt;Esperado: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;deve ser exibida uma mensagem de confirmação     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;o tipo da conta criada deve ser informado &lt;/p&gt;&lt;p&gt;O que aconteceu: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;exibi uma mensagem de confirmação&lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;o tipo de conta não é informada , só seu número de identificação&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>13</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T286</id>
+				<title>CT10 - Gerar número único para a nova conta</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;    &lt;strong&gt;Given &lt;/strong&gt;que uma nova conta foi criada&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;    &lt;strong&gt;When &lt;/strong&gt;os detalhes da conta forem exibidos&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;    Then &lt;/strong&gt;o número da conta deve ser único&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;não deve existir outra conta com o mesmo número&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C87</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>13</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:38:01Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;   &lt;strong&gt;Given &lt;/strong&gt;que uma nova conta foi criada &lt;/p&gt;&lt;p&gt;   &lt;strong&gt;When &lt;/strong&gt;os detalhes da conta forem exibidos&lt;/p&gt;&lt;p&gt;   &lt;strong&gt;Then &lt;/strong&gt;o número da conta deve ser único &lt;/p&gt;&lt;p&gt;   &lt;strong&gt;And &lt;/strong&gt;não deve existir outra conta com o mesmo número &lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>13</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T287</id>
+				<title>CT11 - Impedir abertura de terceira conta SAVINGS</title>
+												<template>Test Case (Text)</template>
+																<type>Automated</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>true</is_automated>
+															<preconds>&lt;p&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário já possui 2 contas SAVINGS&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt; &lt;strong&gt;When &lt;/strong&gt;selecionar o tipo de conta &quot;SAVINGS&quot;&lt;/p&gt;&lt;p&gt; &lt;strong&gt;And &lt;/strong&gt;clicar em &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;   &lt;strong&gt;Then &lt;/strong&gt;o sistema deve impedir a criação da conta&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;deve exibir uma mensagem informando que o limite foi atingido&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C89</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>16</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:41:21Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt; &lt;strong&gt;Given &lt;/strong&gt;que o usuário já possui 2 contas SAVINGS&lt;/p&gt;&lt;p&gt;  &lt;strong&gt;When &lt;/strong&gt;selecionar o tipo de conta &quot;SAVINGS&quot;     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;clicar em &quot;Open New Account&quot; &lt;/p&gt;&lt;p&gt;Esperado: :      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema deve impedir a criação da conta     &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;deve exibir uma mensagem informando que o limite foi atingido &lt;/p&gt;&lt;p&gt;O que aconteceu: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema permite a criação da conta&lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;exibe uma mensagem de &quot;Accoutn Opened&quot; e salva como uma conta do tipo &quot;Savings&quot;&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>16</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T288</id>
+				<title>CT12 - Exibir apenas contas elegíveis para transferência inicial</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que o usuário possui contas cadastradas&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;deve ser exibida a lista de contas elegíveis para transferência inicial&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C90</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>12</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:44:17Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que o usuário possui contas cadastradas      &lt;/p&gt;&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;   &lt;/p&gt;&lt;p&gt;Esperado:    &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;deve ser exibida a lista de contas elegíveis para transferência inicial &lt;/p&gt;&lt;p&gt;O que aconteceu: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;exibi a lista de contas elegíveis e não elegíveis para transferência inicial&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>12</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T289</id>
+				<title>CT13 - Acessar detalhes da conta recém-criada</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;  &lt;strong&gt;Given &lt;/strong&gt;que a conta foi criada com sucesso&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;  &lt;strong&gt;When &lt;/strong&gt;o usuário acessar os detalhes da nova conta&lt;/p&gt;</steps>
+															<expected>&lt;p data-pasted=&quot;true&quot;&gt;&lt;strong&gt;   Then &lt;/strong&gt;as informações atualizadas da conta devem ser exibidas&lt;/p&gt;&lt;p&gt;    &lt;strong&gt;And &lt;/strong&gt;o saldo inicial deve estar disponível para consulta&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C91</caseid>
+																																<casestatus>Design</casestatus>
+																						<caseassignedto></caseassignedto>
+										
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>13</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T02:46:09Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que a conta foi criada com sucesso  &lt;/p&gt;&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;o usuário acessar os detalhes da nova conta  &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;as informações atualizadas da conta devem ser exibidas &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;o saldo inicial deve estar disponível para consulta&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>13</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+								<sections>
+	<section>
+		<name>Testes de Interface</name>
+		<description>&lt;p&gt;&lt;span style=&quot;color: rgb(32, 32, 32); font-family: Arial, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(234, 241, 247); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none&quot; data-pasted=&quot;true&quot;&gt;Subpasta de &quot;Open New Account&quot; para reunir os testes de interface&lt;/span&gt;&lt;/p&gt;</description>
+						<tests>
+						            																																																			<test>
+				<id>T290</id>
+				<title>TI01 -  Selecionar qual tipo de conta abrir</title>
+												<template>Test Case (Text)</template>
+																<type>Usability</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que tenha acessado o sistema com uma conta válida&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema deve permitir selecionar qual o tipo de conta criar&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C125</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>12</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T04:00:07Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot; data-pasted=&quot;true&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;Given &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;que tenha acessado o sistema &lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;com uma conta válida&lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt; When &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt; Then &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;o sistema deve permitir selecionar qual o tipo de conta criar&lt;/span&gt;&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>12</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T291</id>
+				<title>TI02 - Selecionar conta para retirada do dinheiro exigido</title>
+												<template>Test Case (Text)</template>
+																<type>Usability</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>true</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que tenha acessado o sistema com uma conta válida&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema deve permitir selecionar qual o tipo de conta será retirado o dinheiro para depósito na nova conta&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C126</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2026-06-03T04:01:09Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot; data-pasted=&quot;true&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;Given &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;que tenha acessado o sistema com uma conta válida&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   When &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   Then &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;o sistema deve permitir selecionar qual o tipo de conta será retirado o dinheiro para depósito na nova conta&lt;/span&gt;&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T292</id>
+				<title>TI03 -  Mensagem informativa sobre o saldo necessário para depósito</title>
+												<template>Test Case (Text)</template>
+																<type>Automated</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>true</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que  tenha acessado o sistema com uma conta válida&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema deve exibir para o segundo select a seguinte mensagem &quot;A minimum of $ 100,00 must be deposite into this account at time of opening. Please choose an existing account to transfer funds into the new account.&quot;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C127</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2026-06-03T04:10:01Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot; data-pasted=&quot;true&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt; Given &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;que  tenha acessado o sistema com uma conta válida&lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   When &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Esperado: &lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;Then &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;o sistema deve exibir para o segundo select a seguinte mensagem &quot;A minimum of $ 100,00 must be deposite into this account at time of opening. Please choose an existing account to transfer funds into the new account.&quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;O que Aconteceu: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;Then o sistema exibi para o segundo select a seguinte mensagem: &quot;&lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot; data-pasted=&quot;true&quot;&gt;A minimum of $ 90,00 must be deposite into this account at time of opening. Please choose an existing account to transfer funds into the new account.&quot;&lt;/span&gt;&lt;/p&gt;</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T293</id>
+				<title>TI04 - Validação do Título da Página</title>
+												<template>Test Case (Text)</template>
+																<type>Automated</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>true</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que tenha acessado o sistema com uma conta válida&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;O título da página deve estar corretamente escrito &quot;Open New Account&quot;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C128</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>12</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T04:12:30Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que tenha acessado o sistema com uma conta válida   &lt;/p&gt;&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot;    &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;O título da página deve estar corretamente escrito &quot;Open New Account&quot; &lt;/p&gt;</comment>
+																		<version></version>
+																														<elapsed>12</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T294</id>
+				<title>TI05 - Mensagem de confirmação quando uma conta nova for criada</title>
+												<template>Test Case (Text)</template>
+																<type>Automated</type>
+																<priority>High</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>true</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que tenha acessado o sistema com uma conta válida&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot; e selecionar o tipo de conta ,e a conta para depósito &lt;/p&gt;&lt;p&gt;&lt;strong&gt;And &lt;/strong&gt;Clicado no button &quot;Open New Account&quot;&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o Sistema deve exibir &quot;Account Opened!&quot;&lt;/p&gt;</expected>
+									</custom>
+												<caseid>C129</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Passed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>16</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T04:14:18Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Passed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot; data-pasted=&quot;true&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;Given &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;que tenha acessado o sistema com uma conta válida&lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   When &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;acessar a funcionalidade &quot;Open New Account&quot; e selecionar o tipo de conta ,e a conta para depósito &lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.3800000000000001; margin-top: 0pt; margin-bottom: 0pt&quot;&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   And &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;Clicado no button &quot;Open New Account&quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;   Then &lt;/span&gt;&lt;span style=&quot;font-size: 12pt; font-family: Arial,sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap&quot;&gt;o Sistema deve exibir &quot;Account Opened!&quot;&lt;/span&gt;&lt;/p&gt;</comment>
+																		<version>1.0</version>
+																														<elapsed>16</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T295</id>
+				<title>TI06 - Responsividade na página &quot;Open New Account&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Usability</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+								
+								
+												<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<is_automated>false</is_automated>
+															<preconds>&lt;p&gt;&lt;strong&gt;Given &lt;/strong&gt;que tenha acessado o sistema com uma conta válida&lt;/p&gt;</preconds>
+															<steps>&lt;p&gt;&lt;strong&gt;When &lt;/strong&gt;acessar a funcionalidade &quot;Open New Account&quot; e alterar a resolução da página&lt;/p&gt;</steps>
+															<expected>&lt;p&gt;&lt;strong&gt;Then &lt;/strong&gt;o sistema deve se adaptar a nova resolução sem quebrar. &lt;/p&gt;</expected>
+									</custom>
+												<caseid>C130</caseid>
+																																<casestatus>Design</casestatus>
+																																			<caseassignedto>Wenderson Artur</caseassignedto>
+																
+													<automation>No automation attached</automation>
+								<status>Failed</status>
+																<assignedto>Wenderson Artur</assignedto>
+																<inprogress></inprogress>
+																																										<elapsed>13</elapsed>
+																																																						<changes>
+															<change>
+						<createdon>2026-06-03T04:15:34Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Failed</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment>&lt;p&gt;Com a alteração da resolução o site não se adaptou a nova resolução. &lt;/p&gt;</comment>
+																		<version></version>
+																														<elapsed>13</elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2026-06-03T02:06:15Z</createdon>
+																		<createdby>Wenderson Artur</createdby>
+												<status>Untested</status>
+																								<assignedto>Wenderson Artur</assignedto>
+																		<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+</sections>
+			</section>
+	<section>
+		<name>Transfer Funds</name>
+		<description></description>
+										<sections>
+	<section>
+		<name>Testes de Interface</name>
+		<description>&lt;p&gt;&lt;span style=&quot;color: rgb(32, 32, 32); font-family: Arial, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(234, 241, 247); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none&quot; data-pasted=&quot;true&quot;&gt;Subpasta de &quot;Transfer Funds&quot; para reunir os testes de interface&lt;/span&gt;&lt;/p&gt;</description>
+									</section>
+</sections>
+			</section>
+	<section>
+		<name>Request Loan</name>
+		<description></description>
+										<sections>
+	<section>
+		<name>Testes de Interface</name>
+		<description>&lt;p&gt;&lt;span style=&quot;color: rgb(32, 32, 32); font-family: Arial, -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(234, 241, 247); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none&quot; data-pasted=&quot;true&quot;&gt;Subpasta de &quot;Request Loan&quot; para reunir os testes de interface&lt;/span&gt;&lt;/p&gt;</description>
+									</section>
+</sections>
+			</section>
+</sections>
+			</section>
+</sections>
+</run>
