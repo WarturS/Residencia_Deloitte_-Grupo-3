@@ -20,8 +20,7 @@ Durante o desenvolvimento do projeto, serão realizadas atividades como:
 * Validação de APIs;
 * Registro e acompanhamento de bugs;
 * Criação de evidências de testes;
-* Organização das sprints e tarefas;
-* Monitoramento da qualidade das funcionalidades testadas.
+* Organização das sprints e tarefas.
 
 O gerenciamento do projeto segue a metodologia ágil Scrum, promovendo colaboração contínua entre os integrantes da equipe, acompanhamento das entregas e melhoria contínua dos processos de teste.
 
