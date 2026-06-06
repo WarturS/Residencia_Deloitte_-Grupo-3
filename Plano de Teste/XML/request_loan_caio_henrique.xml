@@ -1,0 +1,1171 @@
+<run>
+    <id>R24</id>
+    <name>Request Loan - Caio Henrique</name>
+
+    <stats>
+        <passed>
+            <count>7</count>
+        </passed>
+        <failed>
+            <count>1</count>
+        </failed>
+        <untested>
+            <count>0</count>
+        </untested>
+    </stats>
+
+    <sections>
+        <section>
+
+            <name>Request Loan</name>
+
+            <tests>
+
+                <test>
+                    <id>T245</id>
+
+                    <title>CT01 - Acessar a funcionalidade "Apply for a Loan"</title>
+
+                    <template>Behaviour Driven Development</template>
+
+                    <type>Functional</type>
+
+                    <priority>High</priority>
+
+                    <estimate>300</estimate>
+
+                    <references/>
+
+
+
+                    <custom>
+
+                        <automation_type>
+
+                            <id>0</id>
+
+                            <value>None</value>
+
+                        </automation_type>
+
+
+
+                        <is_automated>false</is_automated>
+
+
+
+                        <preconds>
+
+                            <p>1. O usuário deve estar logado no sistema.</p>
+
+                        </preconds>
+
+
+
+                        <testrail_bdd_scenario>
+
+                            <scenario>
+
+                                <index>1</index>
+
+                                <content>Given que o usuário está devidamente logado no sistema</content>
+
+                            </scenario>
+
+                            <scenario>
+
+                                <index>2</index>
+
+                                <content>And visualiza o menu lateral de serviços</content>
+
+                            </scenario>
+
+                            <scenario>
+
+                                <index>3</index>
+
+                                <content>When clicar na opção "Request Loan"</content>
+
+                            </scenario>
+
+                            <scenario>
+
+                                <index>4</index>
+
+                                <content>Then o sistema deve redirecionar o usuário para a página "Apply for a Loan"</content>
+
+                            </scenario>
+
+                            <scenario>
+
+                                <index>5</index>
+
+                                <content>And exibir o formulário contendo os campos Loan Amount, Down Payment e From Account</content>
+
+                            </scenario>
+
+                        </testrail_bdd_scenario>
+
+                    </custom>
+
+
+
+                    <caseid>C66</caseid>
+
+                    <casestatus>Design</casestatus>
+
+                    <automation>No automation attached</automation>
+
+
+
+                    <status>Passed</status>
+
+                    <assignedto>Caio Henrique</assignedto>
+
+                    <inprogress/>
+
+                    <elapsed>180</elapsed>
+
+
+
+                    <changes>
+
+                        <change>
+
+                            <createdon>2026-06-03T01:10:45Z</createdon>
+
+                            <createdby>Caio Henrique</createdby>
+
+                            <status>Passed</status>
+
+                            <assignedto>Caio Henrique</assignedto>
+
+
+
+                            <comment>
+
+                                <p>Cenário executado com sucesso. O usuário foi redirecionado para a página "Apply for a Loan" conforme esperado.</p>
+
+                            </comment>
+
+
+
+                            <version>1.0</version>
+
+                            <elapsed>180</elapsed>
+
+                            <defects/>
+
+
+
+                            <custom>
+
+                                <testrail_bdd_scenario_results>
+
+                                    <scenario>
+
+                                        <index>1</index>
+
+                                        <content>Given que o usuário está devidamente logado no sistema</content>
+
+                                        <actual/>
+
+                                    </scenario>
+
+                                    <scenario>
+
+                                        <index>2</index>
+
+                                        <content>And visualiza o menu lateral de serviços</content>
+
+                                        <actual/>
+
+                                    </scenario>
+
+                                    <scenario>
+
+                                        <index>3</index>
+
+                                        <content>When clicar na opção "Request Loan"</content>
+
+                                        <actual/>
+
+                                    </scenario>
+
+                                    <scenario>
+
+                                        <index>4</index>
+
+                                        <content>Then o sistema deve redirecionar o usuário para a página "Apply for a Loan"</content>
+
+                                        <actual/>
+
+                                    </scenario>
+
+                                    <scenario>
+
+                                        <index>5</index>
+
+                                        <content>And exibir o formulário contendo os campos Loan Amount, Down Payment e From Account</content>
+
+                                        <actual/>
+
+                                    </scenario>
+
+                                </testrail_bdd_scenario_results>
+
+                            </custom>
+
+
+
+                        </change>
+
+                    </changes>
+                </test>
+
+                <test>
+                    <id>T246</id>
+
+    <title>CT02 - Informar um valor numérico válido no campo "Loan Amount"</title>
+
+    <template>Behaviour Driven Development</template>
+
+    <type>Functional</type>
+
+    <priority>High</priority>
+
+    <estimate>300</estimate>
+
+    <references/>
+
+
+
+    <custom>
+
+        <automation_type>
+
+            <id>0</id>
+
+            <value>None</value>
+
+        </automation_type>
+
+
+
+        <is_automated>false</is_automated>
+
+
+
+        <preconds>
+
+            <p>1. Usuário deve acessar a página "Apply for a Loan".</p>
+
+        </preconds>
+
+
+
+        <testrail_bdd_scenario>
+
+            <scenario>
+
+                <index>1</index>
+
+                <content>Given que o usuário acesse a página "Apply for a Loan"</content>
+
+            </scenario>
+
+
+
+            <scenario>
+
+                <index>2</index>
+
+                <content>And visualize o formulário para solicitação</content>
+
+            </scenario>
+
+
+
+            <scenario>
+
+                <index>3</index>
+
+                <content>When preencher com um valor válido no campo "Loan Amount"</content>
+
+            </scenario>
+
+
+
+            <scenario>
+
+                <index>4</index>
+
+                <content>Then o sistema deve aceitar o valor informado para continuar com a solicitação</content>
+
+            </scenario>
+
+        </testrail_bdd_scenario>
+
+    </custom>
+
+
+
+    <caseid>C67</caseid>
+
+    <casestatus>Design</casestatus>
+
+    <caseassignedto>Caio Henrique</caseassignedto> 
+
+    <automation>No automation attached</automation>
+
+
+
+    <status>Passed</status>
+
+    <assignedto>Caio Henrique</assignedto>
+
+    <inprogress/>
+
+    <elapsed>180</elapsed>
+
+
+
+    <changes>
+
+
+
+        <change>
+
+            <createdon>2026-06-03T01:13:05Z</createdon>
+
+            <createdby>Caio Henrique</createdby>
+
+            <status>Passed</status>
+
+            <assignedto>Caio Henrique</assignedto>
+
+
+
+            <comment>
+
+                <p>Valor numérico válido informado com sucesso no campo "Loan Amount". O sistema aceitou a entrada e prosseguiu conforme esperado.</p>
+
+            </comment>
+
+
+
+            <version>1.0</version>
+
+            <elapsed>180</elapsed>
+
+            <defects/>
+
+
+
+            <custom>
+
+                <testrail_bdd_scenario_results>
+
+
+
+                    <scenario>
+
+                        <index>1</index>
+
+                        <content>Given que o usuário acesse a página "Apply for a Loan"</content>
+
+                        <actual/>
+
+                    </scenario>
+
+
+
+                    <scenario>
+
+                        <index>2</index>
+
+                        <content>And visualize o formulário para solicitação</content>
+
+                        <actual/>
+
+                    </scenario>
+
+
+
+                    <scenario>
+
+                        <index>3</index>
+
+                        <content>When preencher com um valor válido no campo "Loan Amount"</content>
+
+                        <actual/>
+
+                    </scenario>
+
+
+
+                    <scenario>
+
+                        <index>4</index>
+
+                        <content>Then o sistema deve aceitar o valor informado para continuar com a solicitação</content>
+
+                        <actual/>
+
+                    </scenario>
+
+
+
+                </testrail_bdd_scenario_results>
+
+            </custom>
+
+
+
+        </change>
+
+
+
+        <change>
+
+            <createdon>2026-06-02T14:24:11Z</createdon>
+
+            <createdby>Caio Henrique</createdby>
+
+            <status>Untested</status>
+
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment/>
+
+            <version/>
+
+            <elapsed/>
+
+            <defects/>
+
+        </change>
+
+
+
+    </changes>
+
+
+
+                </test>
+
+                <test>
+                    <id>T247</id>
+    <title>CT03 - Informar um valor de entrada (Down Payment) consistente</title>
+    <template>Behaviour Driven Development</template>
+    <type>Functional</type>
+    <priority>High</priority>
+    <estimate>300</estimate>
+    <references/>
+
+    <custom>
+        <automation_type>
+            <id>0</id>
+            <value>None</value>
+        </automation_type>
+
+        <is_automated>false</is_automated>
+
+        <preconds>
+            <p>1. É necessário que o usuário informe um valor no campo "Loan Amount".</p>
+        </preconds>
+
+        <testrail_bdd_scenario>
+            <scenario>
+                <index>1</index>
+                <content>Given que o usuário informou o valor no campo "Loan Amount"</content>
+            </scenario>
+
+            <scenario>
+                <index>2</index>
+                <content>When inserir um valor de entrada no campo "Down Payment" menor ou igual ao empréstimo</content>
+            </scenario>
+
+            <scenario>
+                <index>3</index>
+                <content>Then o sistema deve aceitar o valor para garantir a consistência da solicitação</content>
+            </scenario>
+        </testrail_bdd_scenario>
+    </custom>
+
+    <caseid>C68</caseid>
+    <casestatus>Design</casestatus>
+    <caseassignedto>Caio Henrique</caseassignedto>
+    <automation>No automation attached</automation>
+
+    <status>Passed</status>
+    <assignedto>Caio Henrique</assignedto>
+    <inprogress/>
+    <elapsed>180</elapsed>
+
+    <changes>
+
+        <change>
+            <createdon>2026-06-03T01:15:15Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment>
+                <p>Valor de entrada válido informado com sucesso. O sistema processou a informação corretamente e permitiu a continuidade do fluxo de solicitação de empréstimo.</p>
+            </comment>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o usuário informou o valor no campo "Loan Amount"</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When inserir um valor de entrada no campo "Down Payment" menor ou igual ao empréstimo</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>Then o sistema deve aceitar o valor para garantir a consistência da solicitação</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-02T14:24:11Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Untested</status>
+            <assignedto>Caio Henrique</assignedto>
+            <comment/>
+            <version/>
+            <elapsed/>
+            <defects/>
+        </change>
+
+    </changes>
+                </test>
+
+                <test>
+                    <id>T248</id>
+    <title>CT04 - Selecionar uma conta de origem para débito do empréstimo</title>
+    <template>Behaviour Driven Development</template>
+    <type>Functional</type>
+    <priority>High</priority>
+    <estimate/>
+    <references/>
+
+    <custom>
+        <automation_type>
+            <id>0</id>
+            <value>None</value>
+        </automation_type>
+
+        <is_automated>false</is_automated>
+
+        <preconds>
+            <p>1. É necessário que o usuário preencha os campos de empréstimo e entrada.</p>
+        </preconds>
+
+        <testrail_bdd_scenario>
+            <scenario>
+                <index>1</index>
+                <content>Given que o usuário preencheu os campos de empréstimo e entrada</content>
+            </scenario>
+
+            <scenario>
+                <index>2</index>
+                <content>When clicar no campo "From Account #"</content>
+            </scenario>
+
+            <scenario>
+                <index>3</index>
+                <content>And selecionar uma conta válida da lista</content>
+            </scenario>
+
+            <scenario>
+                <index>4</index>
+                <content>Then o sistema deve fixar e aceitar a conta escolhida para processar a solicitação</content>
+            </scenario>
+        </testrail_bdd_scenario>
+    </custom>
+
+    <caseid>C69</caseid>
+    <casestatus>Design</casestatus>
+    <caseassignedto>Caio Henrique</caseassignedto>
+    <automation>No automation attached</automation>
+
+    <status>Passed</status>
+    <assignedto>Caio Henrique</assignedto>
+    <inprogress/>
+    <elapsed>360</elapsed>
+
+    <changes>
+
+        <change>
+            <createdon>2026-06-03T01:18:25Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment>
+                <p>Conta de origem selecionada com sucesso. O sistema aceitou a seleção e prosseguiu conforme esperado.</p>
+            </comment>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o usuário preencheu os campos de empréstimo e entrada</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When clicar no campo "From Account #"</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>And selecionar uma conta válida da lista</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>4</index>
+                        <content>Then o sistema deve fixar e aceitar a conta escolhida para processar a solicitação</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-03T01:16:40Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment/>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o usuário preencheu os campos de empréstimo e entrada</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When clicar no campo "From Account #"</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>And selecionar uma conta válida da lista</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>4</index>
+                        <content>Then o sistema deve fixar e aceitar a conta escolhida para processar a solicitação</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-02T14:24:11Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Untested</status>
+            <assignedto>Caio Henrique</assignedto>
+            <comment/>
+            <version/>
+            <elapsed/>
+            <defects/>
+        </change>
+
+    </changes>
+                </test>
+
+                <test>
+                    <id>T249</id>
+    <title>CT05 - Processar envio da solicitação do usuário após dados preenchidos corretamente</title>
+    <template>Behaviour Driven Development</template>
+    <type>Functional</type>
+    <priority>High</priority>
+    <estimate>300</estimate>
+    <references/>
+
+    <custom>
+        <automation_type>
+            <id>0</id>
+            <value>None</value>
+        </automation_type>
+
+        <is_automated>false</is_automated>
+
+        <preconds>
+            <p>1. Dado que o usuário preencheu os campos obrigatórios de empréstimo, entrada e conta corretamente.</p>
+        </preconds>
+
+        <testrail_bdd_scenario>
+            <scenario>
+                <index>1</index>
+                <content>Given que o usuário preencheu os campos obrigatórios de empréstimo, entrada e conta corretamente</content>
+            </scenario>
+
+            <scenario>
+                <index>2</index>
+                <content>When clicar no botão "Apply Now"</content>
+            </scenario>
+
+            <scenario>
+                <index>3</index>
+                <content>Then o sistema deve processar as informações para gerar o resultado da solicitação</content>
+            </scenario>
+        </testrail_bdd_scenario>
+    </custom>
+
+    <caseid>C70</caseid>
+    <casestatus>Design</casestatus>
+    <caseassignedto>Caio Henrique</caseassignedto>
+    <automation>No automation attached</automation>
+
+    <status>Passed</status>
+    <assignedto>Caio Henrique</assignedto>
+    <inprogress/>
+    <elapsed>180</elapsed>
+
+    <changes>
+
+        <change>
+            <createdon>2026-06-03T01:24:34Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment>
+                <p>Todos os dados foram preenchidos corretamente e a solicitação foi processada com sucesso. O sistema concluiu o envio conforme esperado.</p>
+            </comment>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o usuário preencheu os campos obrigatórios de empréstimo, entrada e conta corretamente</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When clicar no botão "Apply Now"</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>Then o sistema deve processar as informações para gerar o resultado da solicitação</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-02T14:24:11Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Untested</status>
+            <assignedto>Caio Henrique</assignedto>
+            <comment/>
+            <version/>
+            <elapsed/>
+            <defects/>
+        </change>
+
+    </changes>
+                </test>
+
+                <test>
+                    <id>T250</id>
+    <title>CT06 - Validar o processamento da solicitação de empréstimo</title>
+    <template>Behaviour Driven Development</template>
+    <type>Functional</type>
+    <priority>High</priority>
+    <estimate>300</estimate>
+    <references/>
+
+    <custom>
+        <automation_type>
+            <id>0</id>
+            <value>None</value>
+        </automation_type>
+
+        <is_automated>false</is_automated>
+
+        <preconds>
+            <p>1. Dado que o usuário submeteu o formulário de solicitação.</p>
+        </preconds>
+
+        <testrail_bdd_scenario>
+            <scenario>
+                <index>1</index>
+                <content>Given que o usuário submeteu o formulário de solicitação</content>
+            </scenario>
+
+            <scenario>
+                <index>2</index>
+                <content>When o sistema concluir o processamento dos dados</content>
+            </scenario>
+
+            <scenario>
+                <index>3</index>
+                <content>Then deve exibir a página de resultado com a mensagem "Loan Request Processed"</content>
+            </scenario>
+
+            <scenario>
+                <index>4</index>
+                <content>And apresentar o status final da solicitação</content>
+            </scenario>
+        </testrail_bdd_scenario>
+    </custom>
+
+    <caseid>C71</caseid>
+    <casestatus>Design</casestatus>
+    <caseassignedto>Caio Henrique</caseassignedto>
+    <automation>No automation attached</automation>
+
+    <status>Passed</status>
+    <assignedto>Caio Henrique</assignedto>
+    <inprogress/>
+    <elapsed>180</elapsed>
+
+    <changes>
+
+        <change>
+            <createdon>2026-06-03T01:26:01Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment>
+                <p>A solicitação de empréstimo foi processada corretamente. O sistema executou todas as validações necessárias e retornou o resultado esperado.</p>
+            </comment>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o usuário submeteu o formulário de solicitação</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When o sistema concluir o processamento dos dados</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>Then deve exibir a página de resultado com a mensagem "Loan Request Processed"</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>4</index>
+                        <content>And apresentar o status final da solicitação</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-02T14:24:11Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Untested</status>
+            <assignedto>Caio Henrique</assignedto>
+            <comment/>
+            <version/>
+            <elapsed/>
+            <defects/>
+        </change>
+
+    </changes>
+
+                </test>
+
+                <test>
+                    <id>T251</id>
+    <title>CT07 - Visualizar o status do empréstimo (Approved ou Denied)</title>
+    <template>Behaviour Driven Development</template>
+    <type>Functional</type>
+    <priority>High</priority>
+    <estimate>300</estimate>
+    <references/>
+
+    <custom>
+        <automation_type>
+            <id>0</id>
+            <value>None</value>
+        </automation_type>
+
+        <is_automated>false</is_automated>
+
+        <preconds>
+            <p>1. O formulário de empréstimo deve ser enviado.</p>
+        </preconds>
+
+        <testrail_bdd_scenario>
+            <scenario>
+                <index>1</index>
+                <content>Given que o formulário de empréstimo foi enviado</content>
+            </scenario>
+
+            <scenario>
+                <index>2</index>
+                <content>When o sistema carregar a página de confirmação</content>
+            </scenario>
+
+            <scenario>
+                <index>3</index>
+                <content>Then o usuário deve visualizar o status da análise (ex: Approved ou Denied)</content>
+            </scenario>
+
+            <scenario>
+                <index>4</index>
+                <content>And o status deve estar claramente visível para o solicitante</content>
+            </scenario>
+        </testrail_bdd_scenario>
+    </custom>
+
+    <caseid>C72</caseid>
+    <casestatus>Design</casestatus>
+    <caseassignedto>Caio Henrique</caseassignedto>
+    <automation>No automation attached</automation>
+
+    <status>Passed</status>
+    <assignedto>Caio Henrique</assignedto>
+    <inprogress/>
+    <elapsed>180</elapsed>
+
+    <changes>
+
+        <change>
+            <createdon>2026-06-03T01:27:31Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment>
+                <p>O status do empréstimo foi exibido corretamente após o processamento da solicitação, apresentando o resultado esperado (Approved ou Denied).</p>
+            </comment>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o formulário de empréstimo foi enviado</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When o sistema carregar a página de confirmação</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>Then o usuário deve visualizar o status da análise (ex: Approved ou Denied)</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>4</index>
+                        <content>And o status deve estar claramente visível para o solicitante</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-02T14:24:11Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Untested</status>
+            <assignedto>Caio Henrique</assignedto>
+            <comment/>
+            <version/>
+            <elapsed/>
+            <defects/>
+        </change>
+
+    </changes>
+
+                </test>
+
+                <test>
+                    <id>T252</id>
+    <title>CT08 - Visualizar o número da nova conta após status de empréstimo aprovado</title>
+    <template>Behaviour Driven Development</template>
+    <type>Functional</type>
+    <priority>High</priority>
+    <estimate>300</estimate>
+    <references/>
+
+    <custom>
+        <automation_type>
+            <id>0</id>
+            <value>None</value>
+        </automation_type>
+
+        <is_automated>false</is_automated>
+
+        <preconds>
+            <p>1. O usuário recebeu o status "Approved" para o empréstimo.</p>
+        </preconds>
+
+        <testrail_bdd_scenario>
+            <scenario>
+                <index>1</index>
+                <content>Given que o usuário recebeu o status "Approved" para o empréstimo</content>
+            </scenario>
+
+            <scenario>
+                <index>2</index>
+                <content>When clicar no link do novo número da conta gerado</content>
+            </scenario>
+
+            <scenario>
+                <index>3</index>
+                <content>Then o sistema deve exibir a tela "Account Details" com o saldo e transações da nova conta</content>
+            </scenario>
+        </testrail_bdd_scenario>
+    </custom>
+
+    <caseid>C73</caseid>
+    <casestatus>Design</casestatus>
+    <caseassignedto>Caio Henrique</caseassignedto>
+    <automation>No automation attached</automation>
+
+    <status>Passed</status>
+    <assignedto>Caio Henrique</assignedto>
+    <inprogress/>
+    <elapsed>180</elapsed>
+
+    <changes>
+
+        <change>
+            <createdon>2026-06-03T01:28:46Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Passed</status>
+            <assignedto>Caio Henrique</assignedto>
+
+            <comment>
+                <p>O número da nova conta foi exibido corretamente após a aprovação do empréstimo, conforme esperado pelo sistema.</p>
+            </comment>
+
+            <version>1.0</version>
+            <elapsed>180</elapsed>
+            <defects/>
+
+            <custom>
+                <testrail_bdd_scenario_results>
+
+                    <scenario>
+                        <index>1</index>
+                        <content>Given que o usuário recebeu o status "Approved" para o empréstimo</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>2</index>
+                        <content>When clicar no link do novo número da conta gerado</content>
+                        <actual/>
+                    </scenario>
+
+                    <scenario>
+                        <index>3</index>
+                        <content>Then o sistema deve exibir a tela "Account Details" com o saldo e transações da nova conta</content>
+                        <actual/>
+                    </scenario>
+
+                </testrail_bdd_scenario_results>
+            </custom>
+
+        </change>
+
+        <change>
+            <createdon>2026-06-02T14:24:11Z</createdon>
+            <createdby>Caio Henrique</createdby>
+            <status>Untested</status>
+            <assignedto>Caio Henrique</assignedto>
+            <comment/>
+            <version/>
+            <elapsed/>
+            <defects/>
+        </change>
+
+    </changes>
+                </test>
+
+            </tests>
+
+        </section>
+    </sections>
+
+</run>
