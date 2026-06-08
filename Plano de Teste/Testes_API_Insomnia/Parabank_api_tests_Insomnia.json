@@ -1,0 +1,685 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-06-08T21:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v8.0.0",
+  "resources": [
+    {
+      "_id": "wrk_qaparabank_v4",
+      "parentId": null,
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "QA ParaBank - API v4",
+      "description": "Coleção com login automático via pre-request script. Os IDs de customer e account são obtidos dinamicamente do login john/demo — sem IDs fixos no ambiente.",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://parabank.parasoft.com/parabank/services/bank",
+        "username": "john",
+        "password": "demo",
+        "customer_id": "",
+        "account_id": "",
+        "to_account_id": "",
+        "new_account_id": "",
+        "invalid_customer_id": "99999999",
+        "invalid_account_id": "1",
+        "transfer_amount": "10",
+        "loan_amount": "10",
+        "loan_down_payment": "5",
+        "_logged_in": ""
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "username",
+          "password",
+          "customer_id",
+          "account_id",
+          "to_account_id",
+          "new_account_id",
+          "invalid_customer_id",
+          "invalid_account_id",
+          "transfer_amount",
+          "loan_amount",
+          "loan_down_payment",
+          "_logged_in"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1700000000000,
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_login_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "0. Login",
+      "description": "Execute este request PRIMEIRO para popular customer_id, account_id e to_account_id no ambiente.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_login_v4",
+      "parentId": "fld_login_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/login/{{ _.username }}/{{ _.password }}",
+      "name": "GET Login - Autenticar john/demo",
+      "description": "Faz login com john/demo. Salva automaticamente customer_id, account_id e to_account_id no ambiente para os demais testes.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_login_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== LOGIN - Popula ambiente =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Deve retornar o customerId do usuário\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('id');\n    insomnia.expect(data.id).to.be.a('number');\n    // Salva customer_id no ambiente\n    insomnia.environment.set('customer_id', String(data.id));\n    insomnia.environment.set('_logged_in', 'true');\n});\n\ninsomnia.test(\"[BODY] Deve retornar firstName e lastName\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('firstName');\n    insomnia.expect(data).to.have.property('lastName');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_load_accounts_v4",
+      "parentId": "fld_login_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/customers/{{ _.customer_id }}/accounts",
+      "name": "GET Accounts - Carregar account_id e to_account_id",
+      "description": "Execute APÓS o Login. Popula account_id (primeira conta) e to_account_id (segunda conta) no ambiente.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_load_accounts_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== SETUP: Popula account_id e to_account_id =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[SETUP] Salva account_id (1ª conta) no ambiente\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.be.an('array');\n    insomnia.expect(data.length).to.be.greaterThan(0);\n    insomnia.environment.set('account_id', String(data[0].id));\n});\n\ninsomnia.test(\"[SETUP] Salva to_account_id (2ª conta ou mesma se só há uma)\", () => {\n    const data = insomnia.response.json();\n    if (data.length >= 2) {\n        insomnia.environment.set('to_account_id', String(data[1].id));\n    } else {\n        insomnia.environment.set('to_account_id', String(data[0].id));\n    }\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_accounts_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "1. Accounts Overview",
+      "description": "Listagem de contas do cliente. Requer execução prévia de Folder 0.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 10,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_accounts_positive_v4",
+      "parentId": "fld_accounts_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/customers/{{ _.customer_id }}/accounts",
+      "name": "GET Accounts - Positivo (Cliente Válido)",
+      "description": "Lista todas as contas do customer_id logado. Espera 200 + array de contas.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_accounts_positive_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== ACCOUNTS OVERVIEW - POSITIVO =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[HEADERS] Content-Type deve conter application/json\", () => {\n    const ct = insomnia.response.headers.find(h => h.key.toLowerCase() === 'content-type');\n    insomnia.expect(ct.value).to.include('application/json');\n});\n\ninsomnia.test(\"[BODY] Resposta deve ser um array não-vazio\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.be.an('array');\n    insomnia.expect(data.length).to.be.greaterThan(0);\n});\n\ninsomnia.test(\"[BODY] Cada conta deve ter id, customerId, type e balance\", () => {\n    const data = insomnia.response.json();\n    data.forEach(account => {\n        insomnia.expect(account).to.have.property('id');\n        insomnia.expect(account).to.have.property('customerId');\n        insomnia.expect(account).to.have.property('type');\n        insomnia.expect(account).to.have.property('balance');\n    });\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_accounts_negative_v4",
+      "parentId": "fld_accounts_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/customers/{{ _.invalid_customer_id }}/accounts",
+      "name": "GET Accounts - Negativo (Cliente Inexistente)",
+      "description": "Tenta listar contas de um cliente inexistente (ID 99999999). Espera 400.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_accounts_negative_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== ACCOUNTS OVERVIEW - NEGATIVO =====\n// ParaBank retorna 400 para cliente inexistente.\n\ninsomnia.test(\"[STATUS] Deve retornar erro (4xx ou 5xx) para cliente inexistente\", () => {\n    insomnia.expect(insomnia.response.code).to.be.greaterThan(399);\n});\n\ninsomnia.test(\"[BUG] API retorna 400 ao invés de 404 para cliente inexistente\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(400);\n});\n\ninsomnia.test(\"[EVIDÊNCIA] Deveria retornar 404 Not Found (comportamento correto)\", () => {\n    // FALHA INTENCIONAL - documenta que o ideal seria 404\n    insomnia.expect(insomnia.response.code).to.eql(404);\n});\n\ninsomnia.test(\"[SEGURANÇA] Resposta não deve conter dados de contas bancárias\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.not.include('\"balance\"');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_newaccount_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "2. Open New Account",
+      "description": "Criação de conta bancária. Tipos: 0=CHECKING, 1=SAVINGS. Usa account_id do ambiente.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 20,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_newaccount_checking_v4",
+      "parentId": "fld_newaccount_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/createAccount?customerId={{ _.customer_id }}&newAccountType=0&fromAccountId={{ _.account_id }}",
+      "name": "POST Create Account - Positivo (CHECKING tipo 0)",
+      "description": "Cria conta CHECKING usando account_id real do ambiente. Salva new_account_id.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_newaccount_checking_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== OPEN NEW ACCOUNT - POSITIVO CHECKING =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Resposta deve conter o campo 'id'\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('id');\n    insomnia.expect(data.id).to.be.a('number');\n    // Salva o novo account ID para reutilização\n    insomnia.environment.set('new_account_id', String(data.id));\n});\n\ninsomnia.test(\"[BODY] Tipo da conta deve ser CHECKING\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data.type).to.eql('CHECKING');\n});\n\ninsomnia.test(\"[BODY] customerId deve corresponder ao ambiente\", () => {\n    const data = insomnia.response.json();\n    const envCustomerId = parseInt(insomnia.environment.get('customer_id'));\n    insomnia.expect(data.customerId).to.eql(envCustomerId);\n});\n\ninsomnia.test(\"[BODY] Balance inicial deve ser um número\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('balance');\n    insomnia.expect(data.balance).to.be.a('number');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_newaccount_savings_v4",
+      "parentId": "fld_newaccount_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/createAccount?customerId={{ _.customer_id }}&newAccountType=1&fromAccountId={{ _.account_id }}",
+      "name": "POST Create Account - Positivo (SAVINGS tipo 1)",
+      "description": "Cria conta SAVINGS usando account_id real do ambiente.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_newaccount_savings_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== OPEN NEW ACCOUNT - POSITIVO SAVINGS =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Tipo da conta deve ser SAVINGS\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data.type).to.eql('SAVINGS');\n});\n\ninsomnia.test(\"[BODY] ID da conta deve ser um número positivo\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data.id).to.be.a('number');\n    insomnia.expect(data.id).to.be.greaterThan(0);\n});\n\ninsomnia.test(\"[BODY] customerId deve corresponder ao ambiente\", () => {\n    const data = insomnia.response.json();\n    const envCustomerId = parseInt(insomnia.environment.get('customer_id'));\n    insomnia.expect(data.customerId).to.eql(envCustomerId);\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_newaccount_negative_v4",
+      "parentId": "fld_newaccount_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/createAccount?customerId={{ _.customer_id }}&newAccountType=&fromAccountId={{ _.account_id }}",
+      "name": "POST Create Account - Negativo (Tipo Vazio)",
+      "description": "Bug documentado: Tipo de conta omitido. A API deveria recusar (400 ou 500), mas indevidamente cria uma conta CHECKING retornando 200 OK.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_newaccount_negative_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 300,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== OPEN NEW ACCOUNT - BUG TIPO VAZIO =====\n// Bug documentado: API deveria rejeitar tipo vazio, mas cria conta CHECKING (200 OK).\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK (Comportamento Atual - Bug)\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BUG] API cria conta CHECKING mesmo quando tipo é vazio\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data.type).to.eql('CHECKING');\n});\n\ninsomnia.test(\"[EVIDÊNCIA] Deveria retornar erro 400 ou 500 (Comportamento Correto)\", () => {\n    // FALHA INTENCIONAL: documenta que o correto seria rejeitar.\n    insomnia.expect([400, 500]).to.include(insomnia.response.code);\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_transfer_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "3. Transfer Funds",
+      "description": "Transferência entre contas. Usa account_id e to_account_id do ambiente.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 30,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_transfer_positive_v4",
+      "parentId": "fld_transfer_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/transfer?fromAccountId={{ _.account_id }}&toAccountId={{ _.to_account_id }}&amount={{ _.transfer_amount }}",
+      "name": "POST Transfer - Positivo (Contas Distintas)",
+      "description": "Transfere $10 usando contas reais do ambiente.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_transfer_positive_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== TRANSFER FUNDS - POSITIVO =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[STATUS] Não deve retornar erro 500\", () => {\n    insomnia.expect(insomnia.response.code).to.not.eql(500);\n});\n\ninsomnia.test(\"[BODY] Resposta não deve estar vazia\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.not.be.empty;\n});\n\ninsomnia.test(\"[BODY] Deve conter confirmação de transferência\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.include('Successfully');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_transfer_negative_v4",
+      "parentId": "fld_transfer_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/transfer?fromAccountId={{ _.invalid_account_id }}&toAccountId={{ _.account_id }}&amount={{ _.transfer_amount }}",
+      "name": "POST Transfer - Negativo (Conta Origem Inválida)",
+      "description": "Conta de origem inexistente (ID 1). Deve retornar erro.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_transfer_negative_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== TRANSFER FUNDS - NEGATIVO (conta inválida) =====\n\ninsomnia.test(\"[STATUS] Não deve retornar 200 para conta inválida\", () => {\n    insomnia.expect(insomnia.response.code).to.not.eql(200);\n});\n\ninsomnia.test(\"[STATUS] Deve retornar código de erro (4xx ou 5xx)\", () => {\n    insomnia.expect(insomnia.response.code).to.be.greaterThan(399);\n});\n\ninsomnia.test(\"[SEGURANÇA] Resposta não deve confirmar transferência\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.not.include('Successfully');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_transfer_bug500_v4",
+      "parentId": "fld_transfer_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/transfer?fromAccountId={{ _.account_id }}&toAccountId={{ _.to_account_id }}&amount=",
+      "name": "POST Transfer - Bug Error 500 (Amount Vazio)",
+      "description": "Bug documentado: amount vazio → 500 ao invés de 400.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_transfer_bug500_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 300,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== TRANSFER FUNDS - BUG CONHECIDO (ERROR 500) =====\n// Bug: amount vazio → 500 ao invés de 400.\n\ninsomnia.test(\"[BUG] Deve retornar 500 Internal Server Error (comportamento atual)\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(500);\n});\n\ninsomnia.test(\"[BUG] Corpo deve conter indicação de erro interno\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.not.be.empty;\n});\n\ninsomnia.test(\"[EVIDÊNCIA] Deveria retornar 400 Bad Request com validação\", () => {\n    // FALHA INTENCIONAL: documenta que o correto seria 400.\n    insomnia.expect(insomnia.response.code).to.eql(400);\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_loan_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "4. Request Loan",
+      "description": "Empréstimo. Usa account_id e customer_id do ambiente.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 40,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_loan_positive_v4",
+      "parentId": "fld_loan_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/requestLoan?customerId={{ _.customer_id }}&amount={{ _.loan_amount }}&downPayment={{ _.loan_down_payment }}&fromAccountId={{ _.account_id }}",
+      "name": "POST Loan - Positivo (Entrada Menor que Total)",
+      "description": "amount=$10, downPayment=$5. Espera approved=true.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_loan_positive_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== REQUEST LOAN - POSITIVO =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Resposta deve ter a chave 'approved'\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('approved');\n});\n\ninsomnia.test(\"[BODY] Empréstimo deve ser aprovado (approved=true)\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data.approved).to.be.true;\n});\n\ninsomnia.test(\"[BODY] Deve retornar accountId da conta do empréstimo\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('accountId');\n    insomnia.expect(data.accountId).to.be.a('number');\n});\n\ninsomnia.test(\"[BODY] Deve retornar nome do provedor de empréstimo\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('loanProviderName');\n    insomnia.expect(data.loanProviderName).to.not.be.empty;\n});\n\ninsomnia.test(\"[BODY] Deve retornar responseDate\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('responseDate');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_loan_negative_v4",
+      "parentId": "fld_loan_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/requestLoan?customerId={{ _.customer_id }}&amount=0&downPayment=0&fromAccountId={{ _.account_id }}",
+      "name": "POST Loan - Negativo (Amount Zero)",
+      "description": "amount=0 e downPayment=0. Deve rejeitar ou approved=false.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_loan_negative_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== REQUEST LOAN - NEGATIVO (amount zero) =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 ou erro controlado\", () => {\n    const code = insomnia.response.code;\n    insomnia.expect([200, 400, 422]).to.include(code);\n});\n\ninsomnia.test(\"[BODY] Empréstimo não deve ser aprovado com amount=0\", () => {\n    if (insomnia.response.code === 200) {\n        const data = insomnia.response.json();\n        insomnia.expect(data.approved).to.be.false;\n    }\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_loan_bug_v4",
+      "parentId": "fld_loan_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/requestLoan?customerId={{ _.customer_id }}&amount=10&downPayment=50&fromAccountId={{ _.account_id }}",
+      "name": "POST Loan - Bug Inconsistência (Entrada Maior que Total)",
+      "description": "Bug: downPayment($50) > amount($10). API aprova indevidamente.",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_loan_bug_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 300,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== REQUEST LOAN - BUG INCONSISTÊNCIA =====\n// downPayment ($50) > amount ($10): logicamente inválido.\n// A API aprova, confirmando o bug de regra de negócio.\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Resposta deve conter a chave 'approved'\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('approved');\n});\n\ninsomnia.test(\"[BUG] API aprova empréstimo com entrada > valor total (bug confirmado)\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data.approved).to.be.true;\n});\n\ninsomnia.test(\"[EVIDÊNCIA] Deveria rejeitar (approved=false) quando downPayment > amount\", () => {\n    // FALHA INTENCIONAL\n    const data = insomnia.response.json();\n    insomnia.expect(data.approved).to.be.false;\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_transactions_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "5. Transactions",
+      "description": "Consultas de transações por conta, mês/tipo e cenário negativo.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 50,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_transactions_account_v4",
+      "parentId": "fld_transactions_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/accounts/{{ _.account_id }}/transactions",
+      "name": "GET Transactions - Por Conta (Positivo)",
+      "description": "Lista transações da conta real do ambiente.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_transactions_account_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== TRANSACTIONS - POR CONTA =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Resposta deve ser um array\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.be.an('array');\n});\n\ninsomnia.test(\"[BODY] Cada transação deve ter id, accountId, amount e type\", () => {\n    const data = insomnia.response.json();\n    if (data.length > 0) {\n        const tx = data[0];\n        insomnia.expect(tx).to.have.property('id');\n        insomnia.expect(tx).to.have.property('accountId');\n        insomnia.expect(tx).to.have.property('amount');\n        insomnia.expect(tx).to.have.property('type');\n    }\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_transactions_month_v4",
+      "parentId": "fld_transactions_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/accounts/{{ _.account_id }}/transactions/month/June/type/Credit",
+      "name": "GET Transactions - Por Mês e Tipo (Positivo)",
+      "description": "Filtra transações de crédito em June.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_transactions_month_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== TRANSACTIONS - POR MÊS E TIPO =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Resultado deve ser array (pode ser vazio)\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.be.an('array');\n});\n\ninsomnia.test(\"[BODY] Se há transações, todas devem ser do tipo Credit\", () => {\n    const data = insomnia.response.json();\n    data.forEach(tx => {\n        insomnia.expect(tx.type).to.eql('Credit');\n    });\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_transactions_negative_v4",
+      "parentId": "fld_transactions_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/accounts/{{ _.invalid_account_id }}/transactions",
+      "name": "GET Transactions - Negativo (Conta Inválida)",
+      "description": "Conta inexistente (ID 1). Deve retornar erro.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_transactions_negative_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 300,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== TRANSACTIONS - NEGATIVO (conta inválida) =====\n\ninsomnia.test(\"[STATUS] Deve retornar código de erro (4xx ou 5xx)\", () => {\n    insomnia.expect(insomnia.response.code).to.be.greaterThan(399);\n});\n\ninsomnia.test(\"[SEGURANÇA] Resposta não deve conter dados financeiros\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.not.include('\"amount\"');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_customer_v4",
+      "parentId": "wrk_qaparabank_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "name": "6. Customer Details",
+      "description": "Busca de dados do cliente por ID.",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": 60,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_customer_positive_v4",
+      "parentId": "fld_customer_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/customers/{{ _.customer_id }}",
+      "name": "GET Customer - Positivo (Cliente Válido)",
+      "description": "Retorna dados do customer_id logado.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_customer_positive_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== CUSTOMER DETAILS - POSITIVO =====\n\ninsomnia.test(\"[STATUS] Deve retornar 200 OK\", () => {\n    insomnia.expect(insomnia.response.code).to.eql(200);\n});\n\ninsomnia.test(\"[BODY] Deve conter firstName e lastName\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('firstName');\n    insomnia.expect(data).to.have.property('lastName');\n    insomnia.expect(data.firstName).to.not.be.empty;\n});\n\ninsomnia.test(\"[BODY] Deve conter id correspondente ao solicitado\", () => {\n    const data = insomnia.response.json();\n    const envCustomerId = parseInt(insomnia.environment.get('customer_id'));\n    insomnia.expect(data.id).to.eql(envCustomerId);\n});\n\ninsomnia.test(\"[BODY] Deve conter objeto address com street e city\", () => {\n    const data = insomnia.response.json();\n    insomnia.expect(data).to.have.property('address');\n    insomnia.expect(data.address).to.have.property('street');\n    insomnia.expect(data.address).to.have.property('city');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    },
+    {
+      "_id": "req_customer_negative_v4",
+      "parentId": "fld_customer_v4",
+      "modified": 1700000000000,
+      "created": 1700000000000,
+      "url": "{{ _.base_url }}/customers/{{ _.invalid_customer_id }}",
+      "name": "GET Customer - Negativo (Cliente Inexistente)",
+      "description": "ID inválido (99999999). Deve retornar erro sem expor dados.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "id": "h_req_customer_negative_v4"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 200,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "afterResponseScript": "// ===== CUSTOMER DETAILS - NEGATIVO =====\n\ninsomnia.test(\"[STATUS] Deve retornar erro (4xx ou 5xx)\", () => {\n    insomnia.expect(insomnia.response.code).to.be.greaterThan(399);\n});\n\ninsomnia.test(\"[SEGURANÇA] Não deve expor dados pessoais de outros clientes\", () => {\n    const body = insomnia.response.text();\n    insomnia.expect(body).to.not.include('\"firstName\"');\n    insomnia.expect(body).to.not.include('\"lastName\"');\n    insomnia.expect(body).to.not.include('\"ssn\"');\n});\n\ninsomnia.test(\"[PERFORMANCE] Tempo de resposta deve ser menor que 5s\", () => {\n    insomnia.expect(insomnia.response.responseTime).to.be.below(5000);\n});\n",
+      "_type": "request"
+    }
+  ]
+}
