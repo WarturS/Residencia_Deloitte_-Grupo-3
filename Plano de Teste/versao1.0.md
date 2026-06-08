@@ -112,14 +112,14 @@ dinheiro real.
 ### Técnica de Teste 
 
 - Caixa preta (Testes Manuais)
-- Caixa branca(Teste de API's)
+- Caixa branca (Teste de API's)
 
 ### Ambientes de teste:
 - Edge (Desktop Windows)
 - Chrome (Desktop Windows)
 
 ### Ferramentas utilizadas:
-- Trello, Notion,Insomnia, TestRail
+- Trello, Notion, Insomnia, TestRail
 
 ---
 
@@ -129,7 +129,7 @@ dinheiro real.
 - O Usuário devidamente cadastrado , conseguirá realizar pagamentos,transferência, empréstimos e criação de novas contas.
 - Tanto o ambiente ParaBank quanto o TestRail estarão disponíveis durante todo o período de testes (23/04 a 04/06).
 - Todos os 6 integrantes participarão ativamente de cada sprint conforme planejado.
-- As funcionalidades fora de escopo (Histórico de Pagamentos, Editar Conta, Investimento) não serão testadas em nenhuma sprint. 
+- As funcionalidades fora de escopo (Bill Pay, Find Transactions e Update Contact Info) não serão testadas em nenhuma sprint. 
 
 ### Riscos
 - O ambiente de testes pode apresentar indisponibilidade ou comportamento inconsistente em determinados períodos, comprometendo a execução das sprints.
@@ -142,50 +142,52 @@ Método ágil - Scrum
 
 ### Organização em Sprints
 
-####  Quantas sprints compõem o projeto : 
+####  Quantas sprints compõem o projeto: 
 - 04 Sprint
-#### A duração estimada de cada sprint : 
+#### A duração estimada de cada sprint: 
 - 01 Semana
  
-#### Sprint 01 :
+#### Sprint 01:
 
 Criar os cenários e Casos de testes das seguintes funcionalidades: 
-- Accounts Overview,
-- Open New Account,
-- Transfer Rounds,
-- Request Loan
-- Adicionar os cenários e casos de testes no TestRail
+- Accounts Overview;
+- Open New Account;
+- Transfer Rounds;
+- Request Loan;
+- Adicionar os cenários e casos de testes no TestRail.
 
-#### Sprint 02 : 
+#### Sprint 02: 
 
 Realizar Teste de Interface em Accounts Overview: 
-- Testar carregamento  das dashboards: saldo, lista de contas, histórico
-- Validar responsividade: desktop, mobile
-- Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones
+- Testar carregamento  das dashboards: saldo, lista de contas, histórico;
+- Validar responsividade: desktop, mobile;
+- Validar interface visual: alinhamento, espaçamento, cores, fontes, ícones.
 	  
 Realizar Teste de Interface em Open New Account:
-- Validar formulário>: campos obrigatórios
-- Validar mensagens: sucesso, erro, campos inválidos
+- Validar formulário: campos obrigatórios;
+- Validar mensagens: sucesso, erro, campos inválidos.
 
 Realizar Teste de Interface em Trasnfer Founds: 
-- Validar fluxo de transferência: conta origem, conta destino, valor, confirmação
-- Validar comportamento visual: mensagens, feedback visual
-- Validar erros : saldo insuficiente, valor negativo, campos vazios
-- Teste de responsividade
+- Validar fluxo de transferência: conta origem, conta destino, valor, confirmação;
+- Validar comportamento visual: mensagens, feedback visual;
+- Validar erros: saldo insuficiente, valor negativo, campos vazios;
+- Teste de responsividade.
 
 Realizar Teste de Interface em Request Loan: 
-- Validar formulário de empréstimo: valores, entrada, envio
-- Validar UX/UI: clareza das informações, organização visual
-- Validar erros: valor negativo, campos vazios
+- Validar formulário de empréstimo: valores, entrada, envio;
+- Validar UX/UI: clareza das informações, organização visual;
+- Validar erros: valor negativo, campos vazios.
 
-#### Sprint 03 : 
-- Realizar teste de API
-- Exportação dos XML de cada funcionalidade do TestRail
-- Adicionar Modelos de evidência para cada caso de teste dentro do TestRail
-#### Sprint 04 : 
-- Organizar toda a estrutura do projeto e inserir em um Slide de apresetação
-- Toda a estrutura deve estar contida em um único ambiente(Notion)
+#### Sprint 03: 
+- Realizar teste de API;
+- Exportação dos XML de cada funcionalidade do TestRail;
+- Adicionar Modelos de evidência para cada caso de teste dentro do TestRail.
+  
+#### Sprint 04: 
+- Organizar toda a estrutura do projeto e inserir em um Slide de apresetação;
+- Toda a estrutura deve estar contida em um único ambiente (Notion).
+  
 ### Cronograma
-- Data de início do projeto : 23/04
+- Data de início do projeto: 23/04
 - Data prevista de encerramento: 08/06
 
