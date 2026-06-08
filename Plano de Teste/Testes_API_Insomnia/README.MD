@@ -2,7 +2,7 @@
 
 Este repositório documenta a suíte de testes e a esteira de automação desenvolvida para a API REST do sistema bancário ParaBank, como parte das entregas de Quality Assurance (QA).
 
-A estrutura foi desenvolvida no Insomnia (padrão v4) e contempla 16 requisições automatizadas. O escopo cobre validações de segurança, regras de negócio, fluxos de sucesso e a documentação de vulnerabilidades críticas do back-end.
+A estrutura foi desenvolvida no Insomnia e contempla 16 requisições automatizadas. O escopo cobre validações de segurança, regras de negócio, fluxos de sucesso e a documentação de vulnerabilidades críticas do back-end.
 
 ## Arquitetura e Tecnologias
 
@@ -50,13 +50,13 @@ A coleção está estruturada nos seguintes módulos lógicos:
 ## Instruções de Importação e Execução
 
 ### 1. Importação da Collection
-1. Baixe o arquivo `parabank_api_tests_v4.json` presente neste repositório.
+1. Baixe o arquivo `Parabank_api_tests_Insomnia.json` presente neste repositório.
 2. Abra o Insomnia Desktop.
 3. Clique em **Create** (ou no ícone de "+") e selecione **Import**.
 4. Escolha a opção de importar arquivo (File), selecione o json baixado e confirme a importação.
 
 ### 2. Configuração do Ambiente Dinâmico (Passo Obrigatório)
-A versão v4 da collection automatiza o preenchimento de variáveis de ambiente para contornar os resets do banco de dados da API.
+A versão atual da collection automatiza o preenchimento de variáveis de ambiente para contornar os resets do banco de dados da API.
 1. No canto superior esquerdo do Insomnia, altere o seletor de ambiente de "No Environment" para **"Base Environment"**.
 2. Abra a pasta **"0. Login"**.
 3. **Primeiro**, execute a requisição `POST Login Autenticador`.
