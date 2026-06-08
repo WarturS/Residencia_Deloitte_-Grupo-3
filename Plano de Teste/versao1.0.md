@@ -101,8 +101,7 @@ dinheiro real.
 - Bill Pay
 - Find Transactions
 - Update Contact Info
-- Request Loan
-
+- 
 ---
 
 ## Estratégia de Testes
