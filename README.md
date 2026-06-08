@@ -16,7 +16,6 @@ As funcionalidades contempladas neste projeto são:
 Durante o desenvolvimento do projeto, serão realizadas atividades como:
 
 * Planejamento e modelagem de casos de teste;
-* Testes manuais e automatizados;
 * Validação de APIs;
 * Registro e acompanhamento de bugs;
 * Criação de evidências de testes;
@@ -28,7 +27,6 @@ O gerenciamento do projeto segue a metodologia ágil Scrum, promovendo colabora�
 
 * Notion — organização das informações e acompanhamento das atividades;
 * TestRail — gerenciamento de casos de teste;
-* Playwright — automação de testes;
 * Insomnia — testes de API;
 * Trello — organização das tarefas e sprints.
 
