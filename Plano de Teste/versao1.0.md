@@ -101,7 +101,6 @@ dinheiro real.
 - Bill Pay
 - Find Transactions
 - Update Contact Info
-- 
 ---
 
 ## Estratégia de Testes
