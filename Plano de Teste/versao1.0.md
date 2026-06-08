@@ -98,9 +98,10 @@ dinheiro real.
 ---
 
 ## Funcionalidades Fora de Escopo
-- Histórico de Pagamentos
-- Editar Conta
-- Investimento
+- Bill Pay
+- Find Transactions
+- Update Contact Info
+- Request Loan
 
 ---
 
@@ -108,15 +109,19 @@ dinheiro real.
 
 ### Objetivo dos testes:
 - Desenvolver e manter um sistema robusto, garantindo a execução de testes tanto na interface quanto no backend, com foco na identificação e documentação de falhas. Gerar relatórios claros sobre bugs encontrados, acompanhar os resultados dos testes e assegurar a entrega de resultados positivos, contribuindo para a melhoria contínua da qualidade do software.
-### Tipos ou níveis de teste serão considerados:
-- teste de integração e testes de sistema , nível de teste (caixa preta)
+### Níveis de teste serão considerados:
+- Teste de integração e Testes de sistema
+### Técnica de Teste 
+
+- Caixa preta (Testes Manuais)
+- Caixa branca(Teste de API's)
 
 ### Ambientes de teste:
 - Edge (Desktop Windows)
 - Chrome (Desktop Windows)
 
 ### Ferramentas utilizadas:
-- Trello, Notion, Playwrigth, Insomnia, TestRail
+- Trello, Notion,Insomnia, TestRail
 
 ---
 
@@ -130,7 +135,7 @@ dinheiro real.
 
 ### Riscos
 - O ambiente de testes pode apresentar indisponibilidade ou comportamento inconsistente em determinados períodos, comprometendo a execução das sprints.
-- Problemas na instalação ou configuração das ferramentas podem atrasar o início dos testes automatizados e de API.
+- Problemas na instalação ou configuração das ferramentas podem atrasar o início dos testes de API.
 
 ## Gerenciamento do Projeto
 
@@ -176,11 +181,13 @@ Realizar Teste de Interface em Request Loan:
 - Validar erros: valor negativo, campos vazios
 
 #### Sprint 03 : 
-- Realizar teste de API 
+- Realizar teste de API
+- Exportação dos XML de cada funcionalidade do TestRail
+- Adicionar Modelos de evidência para cada caso de teste dentro do TestRail
 #### Sprint 04 : 
-- Realizar testes dentro do TestRail
-- Realizar casos de evidência para cada caso de teste.
+- Organizar toda a estrutura do projeto e inserir em um Slide de apresetação
+- Toda a estrutura deve estar contida em um único ambiente(Notion)
 ### Cronograma
 - Data de início do projeto : 23/04
-- Data prevista de encerramento: 04/06
+- Data prevista de encerramento: 08/06
 
