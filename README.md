@@ -32,7 +32,7 @@ O gerenciamento do projeto segue a metodologia ágil Scrum, promovendo colabora�
 
 ## Documentação do Projeto
 
-🔗 Link do Notion: *(SERÁ INCLUSO FUTURAMENTE)*
+🔗 Link do Notion: https://longhaired-echinacea-d18.notion.site/Resid-ncia-Tecnol-gica-2026-1-Grupo-3-Deloitte-QA-24f93101defc80c984afc3b3f3ca7a14
 
 ## Objetivo
 
